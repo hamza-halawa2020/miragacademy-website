@@ -305,13 +305,13 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
 
     private applySeoContent(): void {
 
-        const title ='iQuran Academy - Online Quran Memorization, Tajweed and Arabic Lessons';
+        const title ='mirag Academy - Online Quran Memorization, Tajweed and Arabic Lessons';
 
         const description = 'Learn Quran online with qualified teachers in memorization, Tajweed, Arabic language, and Islamic studies for all ages.';
 
         this.seoFaqItems = [
                 {
-                    question: 'What services does iQuran Academy provide?',
+                    question: 'What services does mirag Academy provide?',
                     answer: 'We provide online Quran memorization, Tajweed classes, Arabic language courses, and Islamic studies with qualified teachers.'
                 },
                 {

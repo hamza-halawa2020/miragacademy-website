@@ -98,7 +98,7 @@ export class SeoService {
         }
 
         const baseTag = this.document.querySelector('base');
-        const href = baseTag?.getAttribute('href') || 'https://iquran.co.uk/';
+        const href = baseTag?.getAttribute('href') || 'https://miragacademy.com/';
         return href.endsWith('/') ? href.slice(0, -1) : href;
     }
 }

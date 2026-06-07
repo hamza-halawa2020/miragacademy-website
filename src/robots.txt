@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iquran.co.uk/sitemap.xml
+Sitemap: https://miragacademy.com/sitemap.xml

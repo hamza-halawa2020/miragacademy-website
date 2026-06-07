@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "iquran": {
+    "miragacademy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/iquran",
+            "outputPath": "dist/miragacademy",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -91,10 +91,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "iquran:build:production"
+              "buildTarget": "miragacademy:build:production"
             },
             "development": {
-              "buildTarget": "iquran:build:development"
+              "buildTarget": "miragacademy:build:development"
             }
           },
           "defaultConfiguration": "development"

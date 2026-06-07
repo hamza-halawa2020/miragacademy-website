@@ -1,6 +1,6 @@
 ﻿export const environment = {
-    backEndUrl: 'https://dashboard.iquran.co.uk/api',
-    imgUrl: 'https://dashboard.iquran.co.uk/',
+    backEndUrl: 'https://dashboard.miragacademy.com/api',
+    imgUrl: 'https://dashboard.miragacademy.com/',
     features: {
         workSamples: false,
         staff: true,

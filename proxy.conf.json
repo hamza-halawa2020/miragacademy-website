@@ -1,6 +1,6 @@
 {
     "/public/i18n": {
-        "target": "https://dashboard.iquran.co.uk",
+        "target": "https://dashboard.miragacademy.com",
         "secure": true,
         "changeOrigin": true,
         "logLevel": "debug"
