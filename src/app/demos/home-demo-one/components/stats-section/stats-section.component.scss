@@ -26,8 +26,8 @@
     }
     .btn-islamic-light {
         background: rgba(255, 255, 255, 0.1);
-        border: 2px solid #2ea36f;
-        color: #2ea36f;
+        border: 2px solid #e7c879;
+        color: #e7c879;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 700;
@@ -35,10 +35,10 @@
         backdrop-filter: blur(10px);
         
         &:hover {
-            background: #1a7a52;
+            background: #b8893d;
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.4);
+            box-shadow: 0 8px 20px rgba(184, 137, 61, 0.4);
         }
         
         i {
@@ -51,7 +51,7 @@
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(15px);
-        border: 2px solid rgba(201, 169, 97, 0.2);
+        border: 2px solid rgba(184, 137, 61, 0.2);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
@@ -66,7 +66,7 @@
             &::after {
                 content: '';
                 position: absolute;
-                background: #1a7a52;
+                background: #b8893d;
                 opacity: 0.2;
             }
             
@@ -91,34 +91,34 @@
             left: 10px;
             width: 20px;
             height: 20px;
-            border-left: 2px solid #1a7a52;
-            border-bottom: 2px solid #1a7a52;
+            border-left: 2px solid #b8893d;
+            border-bottom: 2px solid #b8893d;
             opacity: 0.2;
         }
         
         &:hover {
             transform: translateY(-15px) scale(1.02);
             background: rgba(255, 255, 255, 0.08);
-            border-color: #1a7a52;
+            border-color: #b8893d;
             box-shadow: 
                 0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 30px rgba(201, 169, 97, 0.2),
-                inset 0 0 20px rgba(201, 169, 97, 0.05);
+                0 0 30px rgba(184, 137, 61, 0.2),
+                inset 0 0 20px rgba(184, 137, 61, 0.05);
             
             .islamic-frame {
                 transform: rotate(360deg) scale(1.1);
-                border-color: #1a7a52;
-                box-shadow: 0 0 30px rgba(201, 169, 97, 0.4);
+                border-color: #b8893d;
+                box-shadow: 0 0 30px rgba(184, 137, 61, 0.4);
             }
             
             .stat-icon i {
-                color: #2ea36f;
+                color: #e7c879;
                 transform: scale(1.2);
             }
             
             .stat-number {
-                color: #1a7a52;
-                text-shadow: 0 0 20px rgba(201, 169, 97, 0.5);
+                color: #b8893d;
+                text-shadow: 0 0 20px rgba(184, 137, 61, 0.5);
             }
         }
         .islamic-frame {
@@ -126,13 +126,13 @@
             height: 100px;
             margin: 0 auto 25px;
             position: relative;
-            border: 3px solid rgba(201, 169, 97, 0.3);
+            border: 3px solid rgba(184, 137, 61, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            background: rgba(201, 169, 97, 0.05);
+            background: rgba(184, 137, 61, 0.05);
             &::before {
                 content: '';
                 position: absolute;
@@ -141,7 +141,7 @@
                 transform: translate(-50%, -50%) rotate(45deg);
                 width: 70%;
                 height: 70%;
-                border: 2px solid rgba(201, 169, 97, 0.2);
+                border: 2px solid rgba(184, 137, 61, 0.2);
                 transition: all 0.6s ease;
             }
             &::after {
@@ -152,14 +152,14 @@
                 transform: translate(-50%, -50%);
                 width: 60%;
                 height: 60%;
-                border: 1px solid rgba(201, 169, 97, 0.15);
+                border: 1px solid rgba(184, 137, 61, 0.15);
                 border-radius: 50%;
             }
         }
         
         .stat-icon {
             font-size: 2.8rem;
-            color: #1a7a52;
+            color: #b8893d;
             position: relative;
             z-index: 2;
             
@@ -234,7 +234,7 @@
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     }
     50% {
-        filter: drop-shadow(0 0 20px rgba(201, 169, 97, 0.8));
+        filter: drop-shadow(0 0 20px rgba(184, 137, 61, 0.8));
     }
 }
 @media (max-width: 991px) {
@@ -284,6 +284,7 @@
         }
     }
 }
+
 
 
 

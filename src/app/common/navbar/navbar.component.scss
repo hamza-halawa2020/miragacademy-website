@@ -1,7 +1,7 @@
-﻿$primary: #1a7a52;
-$secondary: #2ea36f;
+﻿$primary: #b8893d;
+$secondary: #e7c879;
 $white: #ffffff;
-$dark: #0f5a3a;
+$dark: #4a3218;
 $gray-light: #fdfbf7;
 $gray: #9ca3af;
 .main-navbar {
@@ -13,13 +13,13 @@ $gray: #9ca3af;
     z-index: 1000;
     overflow: visible;
     background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid rgba(15, 90, 58, 0.14);
+    border-bottom: 1px solid rgba(184, 137, 61, 0.14);
     transition: all 0.3s ease;
     padding: 0;
 
     &.sticky {
         background: rgba(255, 255, 255, 0.99);
-        box-shadow: 0 6px 24px rgba(15, 90, 58, 0.1);
+        box-shadow: 0 6px 24px rgba(184, 137, 61, 0.1);
     }
 }
 .navbar-container {
@@ -55,13 +55,13 @@ $gray: #9ca3af;
         width: auto;
         height: 44px;
         max-width: min(33vw, 210px);
-        filter: drop-shadow(0 8px 18px rgba(30, 58, 95, 0.1));
+        filter: drop-shadow(0 8px 18px rgba(74, 50, 24, 0.1));
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     a:hover .brand-logo {
         transform: scale(1.02);
-        filter: drop-shadow(0 12px 24px rgba(30, 58, 95, 0.14));
+        filter: drop-shadow(0 12px 24px rgba(74, 50, 24, 0.14));
     }
 }
 .navbar-menu {
@@ -145,7 +145,7 @@ $gray: #9ca3af;
         gap: 8px;
         padding: 10px 16px;
         background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(15, 90, 58, 0.2);
+        border: 1px solid rgba(184, 137, 61, 0.2);
         border-radius: 30px;
         color: $dark;
         font-size: 14px;
@@ -154,15 +154,15 @@ $gray: #9ca3af;
         transition: all 0.3s ease;
 
         &:hover {
-            background: rgba(26, 122, 82, 0.3);
+            background: rgba(184, 137, 61, 0.3);
             border-color: $primary;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+            box-shadow: 0 4px 15px rgba(184, 137, 61, 0.2);
         }
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+            box-shadow: 0 0 0 3px rgba(184, 137, 61, 0.2);
         }
 
         .flag {
@@ -247,11 +247,11 @@ $gray: #9ca3af;
     &.btn-primary {
         background: linear-gradient(135deg, $primary, $secondary);
         color: $white;
-        box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+        box-shadow: 0 4px 15px rgba(184, 137, 61, 0.3);
 
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(201, 169, 97, 0.4);
+            box-shadow: 0 8px 30px rgba(184, 137, 61, 0.4);
             color: $white;
         }
 
@@ -269,7 +269,7 @@ $gray: #9ca3af;
             background: $primary;
             color: $white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+            box-shadow: 0 4px 15px rgba(184, 137, 61, 0.3);
         }
 
         &:active {
@@ -323,7 +323,7 @@ $gray: #9ca3af;
     padding: 10px 16px;
     font-size: 13px;
     white-space: nowrap;
-    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.08);
+    box-shadow: 0 8px 20px rgba(74, 50, 24, 0.08);
 }
 @media (max-width: 1655px) {
     .main-navbar {
@@ -370,7 +370,7 @@ $gray: #9ca3af;
 
             li {
                 width: 100%;
-                border-bottom: 1px solid rgba(15, 90, 58, 0.12);
+                border-bottom: 1px solid rgba(184, 137, 61, 0.12);
 
                 &:last-child {
                     border-bottom: none;
@@ -496,5 +496,7 @@ $gray: #9ca3af;
 html {
     scroll-behavior: smooth;
 }
+
+
 
 

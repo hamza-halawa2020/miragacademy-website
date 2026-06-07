@@ -1,4 +1,4 @@
-.home-shell {
+﻿.home-shell {
     // background: #f8faf8;
 }
 
@@ -9,7 +9,7 @@
 
 .intro-card {
     // background: #fffef9;
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 18px;
     padding: clamp(18px, 3vw, 28px);
     box-shadow: 0 12px 30px rgba(7, 12, 9, 0.08);
@@ -66,7 +66,7 @@
 :host ::ng-deep .home-block .stat-card,
 :host ::ng-deep .home-block .payment-method-item {
     // background: #fffef9 !important;
-    border: 1px solid rgba(15, 90, 58, 0.12) !important;
+    border: 1px solid rgba(184, 137, 61, 0.12) !important;
     border-radius: 14px !important;
     box-shadow: 0 8px 24px rgba(7, 12, 9, 0.06) !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
@@ -81,7 +81,7 @@
 :host ::ng-deep .home-block .stat-card:hover,
 :host ::ng-deep .home-block .payment-method-item:hover {
     transform: translateY(-4px) !important;
-    border-color: rgba(15, 90, 58, 0.24) !important;
+    border-color: rgba(184, 137, 61, 0.24) !important;
     box-shadow: 0 12px 30px rgba(7, 12, 9, 0.1) !important;
 }
 
@@ -104,14 +104,14 @@
 :host ::ng-deep .home-block .btn-outline,
 :host ::ng-deep .home-block .btn-outline-primary {
     border-radius: 999px !important;
-    border: 1px solid rgba(15, 90, 58, 0.3) !important;
+    border: 1px solid rgba(184, 137, 61, 0.3) !important;
     color: var(--primaryColor) !important;
     background: #fff !important;
 }
 
 :host ::ng-deep .home-block .btn-outline:hover,
 :host ::ng-deep .home-block .btn-outline-primary:hover {
-    background: rgba(15, 90, 58, 0.08) !important;
+    background: rgba(184, 137, 61, 0.08) !important;
 }
 
 :host ::ng-deep .home-block .section-padding,
@@ -124,7 +124,7 @@
 :host ::ng-deep .home-block .contact-form,
 :host ::ng-deep .home-block .contact-form-section {
     // background: #fffef9;
-    border: 1px solid rgba(15, 90, 58, 0.12);
+    border: 1px solid rgba(184, 137, 61, 0.12);
     border-radius: 14px;
     padding: 14px;
 }
@@ -157,13 +157,13 @@
 
     &:hover {
         background: var(--secondaryColor);
-        color: #1a2a22;
+        color: #4a3218;
     }
 }
 
 .intro-btn-outline {
     color: var(--primaryColor);
-    border-color: rgba(15, 90, 58, 0.24);
+    border-color: rgba(184, 137, 61, 0.24);
     background: #fff;
 
     &:hover {
@@ -189,8 +189,8 @@
 
 .home-block-soft {
     // background: rgba(255, 255, 255, 0.56);
-    border-top: 1px solid rgba(15, 90, 58, 0.08);
-    border-bottom: 1px solid rgba(15, 90, 58, 0.08);
+    border-top: 1px solid rgba(184, 137, 61, 0.08);
+    border-bottom: 1px solid rgba(184, 137, 61, 0.08);
 }
 
 .home-block-contact .contact-shell {
@@ -198,7 +198,7 @@
 }
 
 .home-block-seo {
-    border-top: 1px solid rgba(15, 90, 58, 0.1);
+    border-top: 1px solid rgba(184, 137, 61, 0.1);
 }
 
 .seo-content {
@@ -232,7 +232,7 @@
 }
 
 .seo-faq-item {
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 12px;
     padding: 14px;
 
@@ -260,7 +260,7 @@
     max-width: 1200px;
     width: calc(100% - 40px);
     // background: #f2f5f2;
-    border: 1px solid rgba(15, 90, 58, 0.08);
+    border: 1px solid rgba(184, 137, 61, 0.08);
 }
 
 .home-defer-placeholder::before {
@@ -309,3 +309,4 @@
         transform: translateX(100%);
     }
 }
+

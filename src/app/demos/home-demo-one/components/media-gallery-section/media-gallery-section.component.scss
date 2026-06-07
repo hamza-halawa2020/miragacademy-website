@@ -31,7 +31,7 @@
       color: var(--secondaryColor);
 
       i {
-        filter: drop-shadow(0 4px 8px rgba(180, 83, 9, 0.3));
+        filter: drop-shadow(0 4px 8px rgba(184, 137, 61, 0.3));
       }
     }
 
@@ -68,7 +68,7 @@
     margin-bottom: 50px;
 
     .filter-btn {
-      border: 2px solid rgba(6, 78, 59, 0.2);
+      border: 2px solid rgba(184, 137, 61, 0.2);
       color: var(--primaryColor);
       padding: 12px 30px;
       margin: 0 8px;
@@ -85,7 +85,7 @@
 
       &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(6, 78, 59, 0.15);
+        box-shadow: 0 8px 20px rgba(184, 137, 61, 0.15);
         border-color: var(--secondaryColor);
 
         i {
@@ -96,7 +96,7 @@
       &.active {
         // color: white;
         border-color: var(--primaryColor);
-        box-shadow: 0 8px 25px rgba(6, 78, 59, 0.3);
+        box-shadow: 0 8px 25px rgba(184, 137, 61, 0.3);
 
         i {
           color: var(--goldLight);
@@ -141,14 +141,14 @@
     .media-card {
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(6, 78, 59, 0.08);
+      box-shadow: 0 10px 30px rgba(184, 137, 61, 0.08);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       border: 2px solid transparent;
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 50px rgba(6, 78, 59, 0.15);
+        box-shadow: 0 20px 50px rgba(184, 137, 61, 0.15);
         border-color: var(--goldLight);
 
         .media-overlay {
@@ -189,7 +189,7 @@
             transform: translate(-50%, -50%);
             width: 70px;
             height: 70px;
-            background: rgba(180, 83, 9, 0.9);
+            background: rgba(184, 137, 61, 0.9);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -251,7 +251,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 15px rgba(6, 78, 59, 0.3);
+          box-shadow: 0 4px 15px rgba(184, 137, 61, 0.3);
 
           i {
             color: var(--goldLight);
@@ -510,5 +510,6 @@
     }
   }
 }
+
 
 

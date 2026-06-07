@@ -1,5 +1,5 @@
-.learning-benefits {
-    border: 1px solid rgba(15, 90, 58, 0.1);
+﻿.learning-benefits {
+    border: 1px solid rgba(184, 137, 61, 0.1);
     border-radius: 18px;
     padding: clamp(18px, 2.8vw, 30px);
     box-shadow: 0 10px 30px rgba(7, 12, 9, 0.06);
@@ -32,7 +32,7 @@
 }
 
 .benefit-card {
-    border: 1px solid rgba(15, 90, 58, 0.11);
+    border: 1px solid rgba(184, 137, 61, 0.11);
     border-radius: 14px;
     padding: 18px 14px;
     text-align: center;
@@ -41,7 +41,7 @@
 
     &:hover {
         transform: translateY(-3px);
-        border-color: rgba(15, 90, 58, 0.22);
+        border-color: rgba(184, 137, 61, 0.22);
         box-shadow: 0 10px 22px rgba(7, 12, 9, 0.07);
     }
 
@@ -65,13 +65,13 @@
     height: 46px;
     margin: 0 auto 12px;
     border-radius: 12px;
-    border: 1px solid rgba(15, 90, 58, 0.16);
+    border: 1px solid rgba(184, 137, 61, 0.16);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--primaryColor);
     font-size: 1.15rem;
-    background: rgba(15, 90, 58, 0.05);
+    background: rgba(184, 137, 61, 0.05);
 }
 
 @media (max-width: 991px) {
@@ -91,3 +91,4 @@
         gap: 12px;
     }
 }
+

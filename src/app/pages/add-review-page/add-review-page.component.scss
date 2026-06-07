@@ -37,7 +37,7 @@
             margin-bottom: 20px;
             
             i {
-                filter: drop-shadow(0 4px 8px rgba(180, 83, 9, 0.3));
+                filter: drop-shadow(0 4px 8px rgba(184, 137, 61, 0.3));
             }
         }
         
@@ -101,8 +101,8 @@
         background: white;
         border-radius: 20px;
         padding: 50px;
-        box-shadow: 0 20px 60px rgba(6, 78, 59, 0.1);
-        border: 2px solid rgba(180, 83, 9, 0.1);
+        box-shadow: 0 20px 60px rgba(184, 137, 61, 0.1);
+        border: 2px solid rgba(184, 137, 61, 0.1);
         
         .form-group {
             margin-bottom: 30px;
@@ -137,7 +137,7 @@
                 &:focus {
                     outline: none;
                     border-color: var(--secondaryColor);
-                    box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.1);
+                    box-shadow: 0 0 0 4px rgba(184, 137, 61, 0.1);
                 }
                 
                 &.is-invalid {
@@ -180,7 +180,7 @@
                 font-weight: 700;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                box-shadow: 0 8px 25px rgba(6, 78, 59, 0.3);
+                box-shadow: 0 8px 25px rgba(184, 137, 61, 0.3);
                 
                 i {
                     margin-left: 10px;
@@ -188,7 +188,7 @@
                 
                 &:hover:not(:disabled) {
                     transform: translateY(-3px);
-                    box-shadow: 0 12px 35px rgba(6, 78, 59, 0.4);
+                    box-shadow: 0 12px 35px rgba(184, 137, 61, 0.4);
                 }
                 
                 &:disabled {
@@ -228,5 +228,6 @@
         }
     }
 }
+
 
 

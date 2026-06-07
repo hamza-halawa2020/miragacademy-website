@@ -79,7 +79,7 @@ $text-color: var(--paragraphColor);
             
             &:focus {
                 border-color: $secondary-color;
-                box-shadow: 0 10px 25px rgba(180, 83, 9, 0.1);
+                box-shadow: 0 10px 25px rgba(184, 137, 61, 0.1);
                 background-color: #ffffff;
                 outline: none;
             }
@@ -145,7 +145,7 @@ $text-color: var(--paragraphColor);
             display: inline-flex;
             align-items: center;
             background: #f8fafc;
-            border-right: 1px solid rgba(6, 78, 59, 0.08);
+            border-right: 1px solid rgba(184, 137, 61, 0.08);
         }
 
         :host ::ng-deep .iti__selected-dial-code {
@@ -154,7 +154,7 @@ $text-color: var(--paragraphColor);
         }
 
         :host ::ng-deep .iti__country-list {
-            border: 1px solid rgba(6, 78, 59, 0.14);
+            border: 1px solid rgba(184, 137, 61, 0.14);
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
             max-height: 280px;
@@ -162,7 +162,7 @@ $text-color: var(--paragraphColor);
         }
 
         :host ::ng-deep .iti__search-input {
-            border: 1px solid rgba(6, 78, 59, 0.18);
+            border: 1px solid rgba(184, 137, 61, 0.18);
             border-radius: 8px;
             padding: 8px 10px;
             margin: 8px;
@@ -171,7 +171,7 @@ $text-color: var(--paragraphColor);
         }
 
         :host ::ng-deep .iti__country.iti__highlight {
-            background-color: rgba(26, 122, 82, 0.08);
+            background-color: rgba(184, 137, 61, 0.08);
         }
 
         :host ::ng-deep .iti__country-name,
@@ -219,7 +219,7 @@ $text-color: var(--paragraphColor);
         font-weight: 700;
         transition: all 0.4s ease;
         cursor: pointer;
-        box-shadow: 0 10px 25px rgba(6, 78, 59, 0.2);
+        box-shadow: 0 10px 25px rgba(184, 137, 61, 0.2);
         
         i {
             margin-right: 10px;
@@ -228,7 +228,7 @@ $text-color: var(--paragraphColor);
         &:hover:not(:disabled) {
             background: $secondary-color;
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(180, 83, 9, 0.3);
+            box-shadow: 0 15px 35px rgba(184, 137, 61, 0.3);
         }
         
         &:disabled {
@@ -371,7 +371,7 @@ $text-color: var(--paragraphColor);
     display: inline-flex;
     align-items: center;
     background: #f8fafc;
-    border-right: 1px solid rgba(6, 78, 59, 0.08);
+    border-right: 1px solid rgba(184, 137, 61, 0.08);
 }
 
 :host ::ng-deep .contact-form .form-group .iti__selected-dial-code {
@@ -380,7 +380,7 @@ $text-color: var(--paragraphColor);
 }
 
 :host ::ng-deep .contact-form .form-group .iti__country-list {
-    border: 1px solid rgba(6, 78, 59, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     max-height: 280px;
@@ -388,7 +388,7 @@ $text-color: var(--paragraphColor);
 }
 
 :host ::ng-deep .contact-form .form-group .iti__search-input {
-    border: 1px solid rgba(6, 78, 59, 0.18);
+    border: 1px solid rgba(184, 137, 61, 0.18);
     border-radius: 8px;
     padding: 8px 10px;
     margin: 8px;
@@ -397,7 +397,7 @@ $text-color: var(--paragraphColor);
 }
 
 :host ::ng-deep .contact-form .form-group .iti__country.iti__highlight {
-    background-color: rgba(26, 122, 82, 0.08);
+    background-color: rgba(184, 137, 61, 0.08);
 }
 
 :host ::ng-deep .contact-form .form-group .iti__country-name,
@@ -420,3 +420,4 @@ $text-color: var(--paragraphColor);
         height: 58px;
     }
 }
+

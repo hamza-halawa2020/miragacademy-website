@@ -1,4 +1,4 @@
-.teachers-section {
+﻿.teachers-section {
     overflow: hidden;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .teacher-card {
-    border: 1px solid rgba(6, 78, 59, 0.12);
+    border: 1px solid rgba(184, 137, 61, 0.12);
     border-radius: 16px;
     background: #fff;
     padding: 18px;
@@ -81,10 +81,10 @@
 .carousel-btn {
     width: 48px;
     height: 48px;
-    border: 1px solid rgba(30, 58, 95, 0.1);
+    border: 1px solid rgba(74, 50, 24, 0.1);
     border-radius: 50%;
     color: var(--primaryColor);
-    box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+    box-shadow: 0 12px 24px rgba(74, 50, 24, 0.12);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +94,7 @@
 
     &:hover {
         color: var(--whiteColor);
-        box-shadow: 0 16px 28px rgba(201, 169, 97, 0.24);
+        box-shadow: 0 16px 28px rgba(184, 137, 61, 0.24);
         transform: translateY(-2px);
     }
 }
@@ -115,3 +115,4 @@
         height: 42px;
     }
 }
+

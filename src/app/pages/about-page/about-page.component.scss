@@ -1,8 +1,8 @@
-$primary: var(--primaryColor);
+﻿$primary: var(--primaryColor);
 $secondary: var(--secondaryColor);
 $text: var(--paragraphColor);
 $surface: #fffef9;
-$line: rgba(15, 90, 58, 0.14);
+$line: rgba(184, 137, 61, 0.14);
 
 .about-page {
     padding: 54px 0 72px;
@@ -23,7 +23,7 @@ $line: rgba(15, 90, 58, 0.14);
 .about-hero {
     text-align: start;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(244, 250, 247, 0.9));
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 18px;
     padding: clamp(18px, 3vw, 28px);
 }
@@ -34,8 +34,8 @@ $line: rgba(15, 90, 58, 0.14);
     padding: 5px 12px;
     margin-bottom: 10px;
     border-radius: 999px;
-    border: 1px solid rgba(15, 90, 58, 0.16);
-    background: rgba(15, 90, 58, 0.04);
+    border: 1px solid rgba(184, 137, 61, 0.16);
+    background: rgba(184, 137, 61, 0.04);
     color: $primary;
     font-size: 0.78rem;
     font-weight: 700;
@@ -64,12 +64,12 @@ $line: rgba(15, 90, 58, 0.14);
     width: min(170px, 42%);
     height: 2px;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(15, 90, 58, 0.55), rgba(15, 90, 58, 0.08));
+    background: linear-gradient(90deg, rgba(184, 137, 61, 0.55), rgba(184, 137, 61, 0.08));
 }
 
 .about-quick-points {
     background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 18px;
     padding: 16px;
     display: grid;
@@ -92,7 +92,7 @@ $line: rgba(15, 90, 58, 0.14);
         width: 18px;
         height: 18px;
         border-radius: 999px;
-        border: 1px solid rgba(15, 90, 58, 0.18);
+        border: 1px solid rgba(184, 137, 61, 0.18);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -151,7 +151,7 @@ $line: rgba(15, 90, 58, 0.14);
 
     &:hover {
         transform: translateY(-3px);
-        border-color: rgba(26, 122, 82, 0.36);
+        border-color: rgba(184, 137, 61, 0.36);
         box-shadow: 0 12px 26px rgba(8, 22, 15, 0.08);
     }
 
@@ -174,7 +174,7 @@ $line: rgba(15, 90, 58, 0.14);
 .feature-top {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px dashed rgba(15, 90, 58, 0.22);
+    border-bottom: 1px dashed rgba(184, 137, 61, 0.22);
 }
 
 .feature-icon {
@@ -186,8 +186,8 @@ $line: rgba(15, 90, 58, 0.14);
     justify-content: center;
     margin-bottom: 8px;
     color: $primary;
-    background: rgba(15, 90, 58, 0.08);
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    background: rgba(184, 137, 61, 0.08);
+    border: 1px solid rgba(184, 137, 61, 0.14);
 
     i {
         font-size: 15px;
@@ -234,3 +234,4 @@ $line: rgba(15, 90, 58, 0.14);
         grid-template-columns: 1fr;
     }
 }
+

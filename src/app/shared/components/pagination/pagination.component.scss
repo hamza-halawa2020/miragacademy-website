@@ -51,7 +51,7 @@ $text-color: var(--paragraphColor);
         &.active .page-link {
             background: $secondary-color;
             color: #fff;
-            box-shadow: 0 10px 20px rgba(180, 83, 9, 0.3);
+            box-shadow: 0 10px 20px rgba(184, 137, 61, 0.3);
             transform: scale(1.05);
         }
 
@@ -70,5 +70,6 @@ $text-color: var(--paragraphColor);
         transform: rotate(180deg);
     }
 }
+
 
 

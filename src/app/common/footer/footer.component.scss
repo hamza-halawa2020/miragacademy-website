@@ -1,9 +1,9 @@
-$bg: #ffffff;
-$panel: #f8faf8;
-$text: #0f5a3a;
-$muted: #4b5563;
-$accent: #1a7a52;
-$line: rgba(15, 90, 58, 0.16);
+﻿$bg: #ffffff;
+$panel: #fbf7ef;
+$text: #4a3218;
+$muted: #5b5146;
+$accent: #b8893d;
+$line: rgba(184, 137, 61, 0.16);
 
 .site-footer {
     --footer-corner-size: clamp(110px, 9vw, 170px);
@@ -182,3 +182,4 @@ $line: rgba(15, 90, 58, 0.16);
         padding: 12px 0 16px;
     }
 }
+

@@ -1,4 +1,4 @@
-$primary-color: var(--primaryColor);
+﻿$primary-color: var(--primaryColor);
 $secondary-color: var(--secondaryColor);
 $text-color: var(--paragraphColor);
 
@@ -52,7 +52,7 @@ $text-color: var(--paragraphColor);
 
 .content-section {
     background: #fffef9;
-    border: 1px solid rgba(15, 90, 58, 0.14);
+    border: 1px solid rgba(184, 137, 61, 0.14);
     border-radius: 16px;
     padding: clamp(18px, 3.3vw, 30px);
     box-shadow: 0 10px 28px rgba(7, 12, 9, 0.08);
@@ -102,7 +102,7 @@ $text-color: var(--paragraphColor);
     gap: 10px;
     padding: 11px 18px;
     border-radius: 999px;
-    border: 1px solid rgba(15, 90, 58, 0.2);
+    border: 1px solid rgba(184, 137, 61, 0.2);
     background: #f7f3e7;
     color: $primary-color;
     text-decoration: none;
@@ -116,7 +116,7 @@ $text-color: var(--paragraphColor);
     &:hover {
         background: $secondary-color;
         border-color: $secondary-color;
-        color: #1a2a22;
+        color: #4a3218;
         transform: translateY(-2px);
     }
 }
@@ -146,3 +146,4 @@ $text-color: var(--paragraphColor);
         line-height: 1.85;
     }
 }
+
