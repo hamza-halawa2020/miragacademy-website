@@ -305,7 +305,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
 
     private applySeoContent(): void {
 
-        const title ='mirag Academy - Online Quran Memorization, Tajweed and Arabic Lessons';
+        const title = 'Mirag Academy - Online Quran Memorization, Tajweed and Arabic Lessons';
 
         const description = 'Learn Quran online with qualified teachers in memorization, Tajweed, Arabic language, and Islamic studies for all ages.';
 

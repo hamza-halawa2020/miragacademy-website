@@ -19,6 +19,18 @@ type SeoConfig = {
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
+    private readonly siteName = 'Mirag Academy';
+    private readonly defaultSiteUrl = 'https://miragacademy.com';
+    private readonly navigationItems = [
+        { name: 'Home', url: '/' },
+        { name: 'Courses', url: '/courses' },
+        { name: 'Teachers', url: '/teachers' },
+        { name: 'Student Reviews', url: '/testimonials' },
+        { name: 'About Us', url: '/about' },
+        { name: 'Contact Us', url: '/contacts' },
+        { name: 'Apply as a Teacher', url: '/teacher-application' }
+    ];
+
     constructor(
         private title: Title,
         private meta: Meta,
@@ -28,19 +40,22 @@ export class SeoService {
 
     update(config: SeoConfig): void {
         const siteUrl = this.getSiteUrl();
-        const canonicalUrl = `${siteUrl}${config.canonicalPath ?? ''}`;
+        const canonicalPath = config.canonicalPath ?? '';
+        const canonicalUrl = `${siteUrl}${canonicalPath}`;
         const pageType = config.type ?? 'website';
         const locale = config.locale ?? 'en_US';
-        const image = config.image ?? `${siteUrl}/assets/images/logo.webp`;
+        const image = config.image ?? `${siteUrl}/assets/images/full_logo.webp`;
 
         this.title.setTitle(config.title);
         this.meta.updateTag({ name: 'description', content: config.description });
 
+        this.meta.updateTag({ property: 'og:site_name', content: this.siteName });
         this.meta.updateTag({ property: 'og:title', content: config.title });
         this.meta.updateTag({ property: 'og:description', content: config.description });
         this.meta.updateTag({ property: 'og:type', content: pageType });
         this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
         this.meta.updateTag({ property: 'og:image', content: image });
+        this.meta.updateTag({ property: 'og:image:secure_url', content: image });
         this.meta.updateTag({ property: 'og:locale', content: locale });
 
         this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
@@ -49,6 +64,7 @@ export class SeoService {
         this.meta.updateTag({ name: 'twitter:image', content: image });
 
         this.updateCanonical(canonicalUrl);
+        this.updateSiteSchema(siteUrl);
         this.updateFaqSchema(config.faq);
     }
 
@@ -64,19 +80,13 @@ export class SeoService {
 
     private updateFaqSchema(faq?: FaqItem[]): void {
         const scriptId = 'seo-faq-schema';
-        const existingScript = this.document.getElementById(scriptId);
-        if (existingScript) {
-            existingScript.remove();
-        }
 
         if (!faq || faq.length === 0) {
+            this.removeJsonLd(scriptId);
             return;
         }
 
-        const script = this.document.createElement('script');
-        script.id = scriptId;
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify({
+        this.updateJsonLd(scriptId, {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: faq.map((item) => ({
@@ -88,8 +98,62 @@ export class SeoService {
                 }
             }))
         });
+    }
 
-        this.document.head.appendChild(script);
+    private updateSiteSchema(siteUrl: string): void {
+        this.updateJsonLd('seo-site-schema', {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'Organization',
+                    '@id': `${siteUrl}/#organization`,
+                    name: this.siteName,
+                    url: `${siteUrl}/`,
+                    logo: `${siteUrl}/assets/images/full_logo.webp`,
+                    image: `${siteUrl}/assets/images/full_logo.webp`,
+                    description: 'Online Quran, Tajweed, Arabic language, and Islamic studies academy for kids and adults.'
+                },
+                {
+                    '@type': 'WebSite',
+                    '@id': `${siteUrl}/#website`,
+                    name: this.siteName,
+                    alternateName: ['Mirag Academy', 'miragacademy'],
+                    url: `${siteUrl}/`,
+                    publisher: {
+                        '@id': `${siteUrl}/#organization`
+                    }
+                },
+                {
+                    '@type': 'ItemList',
+                    '@id': `${siteUrl}/#site-navigation`,
+                    name: 'Main site navigation',
+                    itemListElement: this.navigationItems.map((item, index) => ({
+                        '@type': 'SiteNavigationElement',
+                        position: index + 1,
+                        name: item.name,
+                        url: `${siteUrl}${item.url === '/' ? '/' : item.url}`
+                    }))
+                }
+            ]
+        });
+    }
+
+    private updateJsonLd(id: string, data: object): void {
+        let script = this.document.getElementById(id) as HTMLScriptElement | null;
+
+        if (!script) {
+            script = this.document.createElement('script');
+            script.id = id;
+            script.type = 'application/ld+json';
+            this.document.head.appendChild(script);
+        }
+
+        script.text = JSON.stringify(data);
+    }
+
+    private removeJsonLd(id: string): void {
+        const existingScript = this.document.getElementById(id);
+        existingScript?.remove();
     }
 
     private getSiteUrl(): string {
@@ -98,7 +162,12 @@ export class SeoService {
         }
 
         const baseTag = this.document.querySelector('base');
-        const href = baseTag?.getAttribute('href') || 'https://miragacademy.com/';
+        const href = baseTag?.getAttribute('href') || this.defaultSiteUrl;
+
+        if (href.startsWith('/')) {
+            return this.defaultSiteUrl;
+        }
+
         return href.endsWith('/') ? href.slice(0, -1) : href;
     }
 }

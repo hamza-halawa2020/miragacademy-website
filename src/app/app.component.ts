@@ -1,15 +1,16 @@
-﻿import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { RouterOutlet, Router, Event, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, RouterOutlet, Router, Event, NavigationEnd } from '@angular/router';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { WhatsappFloatComponent } from './common/whatsapp-float/whatsapp-float.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { BackToTopComponent } from './common/back-to-top/back-to-top.component';
+import { SeoService } from './shared/services/seo.service';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, NavbarComponent, WhatsappFloatComponent,  FooterComponent, BackToTopComponent],
+    imports: [RouterOutlet, NavbarComponent, WhatsappFloatComponent, FooterComponent, BackToTopComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
@@ -23,12 +24,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
     constructor(
         private router: Router,
+        private activatedRoute: ActivatedRoute,
         private viewportScroller: ViewportScroller,
-        private ngZone: NgZone
+        private ngZone: NgZone,
+        private seoService: SeoService
     ) {
         this.router.events.subscribe((event: Event) => {
             if (event instanceof NavigationEnd) {
                 this.viewportScroller.scrollToPosition([0, 0]);
+                this.applyRouteSeo();
             }
         });
     }
@@ -111,5 +115,20 @@ export class AppComponent implements OnInit, OnDestroy {
             }, 12000);
         });
     }
-}
 
+    private applyRouteSeo(): void {
+        let route = this.activatedRoute.firstChild;
+
+        while (route?.firstChild) {
+            route = route.firstChild;
+        }
+
+        const seo = route?.snapshot.data['seo'];
+
+        if (!seo) {
+            return;
+        }
+
+        this.seoService.update(seo);
+    }
+}
