@@ -58,6 +58,17 @@ export const routes: Routes = [
         }
     },
     {
+        path: 'pricing',
+        loadComponent: () => import('./pages/pricing-page/pricing-page.component').then(m => m.PricingPageComponent),
+        data: {
+            seo: {
+                title: 'Pricing - Mirag Academy',
+                description: 'View Mirag Academy monthly pricing plans for online Quran, Tajweed, Arabic language, and Islamic studies classes.',
+                canonicalPath: '/pricing'
+            }
+        }
+    },
+    {
         path: 'teacher-application',
         loadComponent: () => import('./pages/teacher-application-page/teacher-application-page.component').then(m => m.TeacherApplicationPageComponent),
         data: {

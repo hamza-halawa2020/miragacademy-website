@@ -1,0 +1,105 @@
+<section class="pricing-hero">
+    <div class="container">
+        <span class="eyebrow">Our Pricing</span>
+        <h1>Flexible Quran Learning Plans</h1>
+        <p>
+            Choose a monthly package that fits your family schedule. Each plan includes live online classes with qualified teachers, clear progress follow-up, and no hidden fees.
+        </p>
+        <div class="hero-actions">
+            <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
+            <a href="#pricing-plans" class="btn btn-outline-primary">View Plans</a>
+        </div>
+    </div>
+</section>
+
+<section class="pricing-intro">
+    <div class="container">
+        <div class="intro-grid">
+            <article>
+                <h2>Learn Quran Online from Home</h2>
+                <p>
+                    Start a consistent learning journey for Quran recitation, memorization, Tajweed, Arabic language, or Islamic studies. Our plans are designed for kids and adults with flexible weekly schedules.
+                </p>
+            </article>
+            <article>
+                <h3>Simple Monthly Packages</h3>
+                <p>
+                    Select the number of classes you need each month. You can begin with a light schedule or increase your learning pace whenever you are ready.
+                </p>
+            </article>
+            <article>
+                <h3>No Hidden Fees</h3>
+                <p>
+                    Transparent monthly pricing, live sessions, and support from our team to help you choose the right plan before enrollment.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="pricing-plans" class="pricing-plans">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Choose Your Package</span>
+            <h2>Monthly Class Plans</h2>
+            <p>All plans are suitable for Quran, Tajweed, Arabic, and Islamic studies programs.</p>
+        </div>
+
+        <div class="plans-grid" *ngIf="isLoading">
+            <div class="plan-card skeleton-card" *ngFor="let item of [1,2,3,4,5,6]"></div>
+        </div>
+
+        <div class="plans-grid" *ngIf="!isLoading">
+            <article class="plan-card" *ngFor="let plan of plans" [class.featured]="plan.is_featured">
+                <span class="badge" *ngIf="plan.badge || plan.is_featured">{{ plan.badge || 'Popular' }}</span>
+                <div class="plan-top">
+                    <h3>{{ plan.title }}</h3>
+                    <p>{{ plan.subtitle || 'A flexible monthly learning plan' }}</p>
+                </div>
+                <div class="price-row">
+                    <span class="currency">{{ plan.currency || 'USD' }}</span>
+                    <strong>{{ formatAmount(plan.price) }}</strong>
+                    <span class="period">/ month</span>
+                </div>
+                <div class="plan-stats" aria-label="Plan details">
+                    <div class="stat-item">
+                        <span class="stat-value">{{ plan.classes_count }}</span>
+                        <span class="stat-label">Classes / month</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">{{ plan.days_per_week }}</span>
+                        <span class="stat-label">Days / week</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">{{ plan.minutes_per_class }}</span>
+                        <span class="stat-label">Minutes / class</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">{{ plan.price_per_class ? formatMoney(plan.price_per_class, plan.currency) : '-' }}</span>
+                        <span class="stat-label">Price / class</span>
+                    </div>
+                </div>
+                <ul>
+                    <li *ngFor="let feature of planFeatures(plan)">
+                        <i class="fa-solid fa-check"></i>
+                        <span>{{ feature }}</span>
+                    </li>
+                </ul>
+                <a routerLink="/contacts" [queryParams]="{ plan: plan.title }" class="choose-btn">Choose Plan</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="pricing-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div>
+                <span class="eyebrow">Need Help?</span>
+                <h2>Not sure which plan fits you?</h2>
+                <p>Contact us and we will help you choose the right schedule based on age, level, and learning goal.</p>
+            </div>
+            <a routerLink="/contacts" class="btn btn-primary">Contact Us</a>
+        </div>
+    </div>
+</section>

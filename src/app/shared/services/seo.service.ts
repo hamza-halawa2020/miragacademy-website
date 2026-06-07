@@ -23,6 +23,7 @@ export class SeoService {
     private readonly defaultSiteUrl = 'https://miragacademy.com';
     private readonly navigationItems = [
         { name: 'Home', url: '/' },
+        { name: 'Pricing', url: '/pricing' },
         { name: 'Courses', url: '/courses' },
         { name: 'Teachers', url: '/teachers' },
         { name: 'Student Reviews', url: '/testimonials' },
