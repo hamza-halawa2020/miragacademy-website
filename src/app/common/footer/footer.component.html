@@ -1,0 +1,66 @@
+﻿<footer class="site-footer">
+    <app-ornament-corners  direction="down" size="100%" edgeOffset="0px" [opacity]="0.19" [saturation]="0.68" [brightness]="1.08" [mirrorLeft]="true" [mirrorRight]="false" [flipY]="true" imageUrl="/assets/images/pngtree-islamic-corner-frame-png-image_7096173.webp"></app-ornament-corners>
+    
+    <div class="footer-shell">
+        <div class="footer-top">
+            <div class="brand-block">
+                <img src="/assets/images/logo.webp" alt="iquran" class="footer-logo" width="584" height="621" loading="lazy" decoding="async">
+                <p class="brand-text" *ngIf="settings.about_us_footer">{{ settings.about_us_footer }}</p>
+                <p class="brand-text" *ngIf="!settings.about_us_footer">{{ settings.about_us }}</p>
+
+                <div class="social-links">
+                    <!-- <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a> -->
+                    <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>{{ 'INFO' | translate }}</h3>
+                <ul>
+
+                    <!-- <li *ngIf="!settings.address">{{ "NEW_CAIRO" | translate }}</li> -->
+                    <li *ngIf="settings.email"><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
+                    <!-- <li *ngIf="settings.phone"><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li> -->
+                    <li *ngIf="settings.whatsapp"><a href="tel:{{ settings.whatsapp }}">{{ settings.whatsapp }}</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>{{ 'MENU' | translate }}</h3>
+                <ul>
+                    <li><a routerLink="/">{{ 'HOME' | translate }}</a></li>
+                    <li><a routerLink="/testimonials">{{ 'TESTIMONIALS' | translate }}</a></li>
+                    <li><a routerLink="/contacts">{{ 'CONTACT_US' | translate }}</a></li>
+                    <li><a routerLink="/about">{{ 'ABOUT_US' | translate }}</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>{{ 'POLICIES_SUPPORT' | translate }}</h3>
+                <ul>
+                    <li><a routerLink="/privacy-policy">{{ 'PRIVACY_POLICY' | translate }}</a></li>
+                    <li><a routerLink="/terms-conditions">{{ 'TERMS_OF_SERVICE' | translate }}</a></li>
+                    <li><a routerLink="/contacts">{{ 'SUPPORT' | translate }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>{{ 'ALL_RIGHTS_RESERVED' | translate }} © {{ currentYear }}</p>
+            <div class="bottom-links">
+                <a routerLink="/privacy-policy">{{ 'PRIVACY' | translate }}</a>
+                <a routerLink="/terms-conditions">{{ 'TERMS' | translate }}</a>
+            </div>
+        </div>
+    </div>
+</footer>

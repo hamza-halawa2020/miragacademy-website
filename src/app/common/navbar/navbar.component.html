@@ -1,0 +1,56 @@
+﻿<nav class="main-navbar" [class.sticky]="isSticky">
+    <app-ornament-corners direction="up" size="100%" edgeOffset="0px" [opacity]="0.24" [saturation]="0.72" [brightness]="1.06" [mirrorLeft]="true" [mirrorRight]="false" imageUrl="/assets/images/pngtree-islamic-corner-frame-png-image_7096173.webp"></app-ornament-corners>
+    <div class="container navbar-container">
+        
+        <div class="navbar-brand">
+            <a routerLink="/" (click)="closeMobileMenu()" aria-label="I Quran home">
+                <img
+                    src="assets/images/logo.webp"
+                    alt="I Quran"
+                    class="brand-logo"
+                    width="584"
+                    height="621"
+                    decoding="async"
+                    fetchpriority="high"
+                />
+            </a>
+        </div>
+
+        
+        <div id="primary-navigation" class="navbar-menu" [class.active]="!isCollapsed">
+            <ul class="nav-links">
+                <li *ngFor="let item of menuItems">
+                    <a [routerLink]="item.route" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: item.route === '/'}" (click)="closeMobileMenu()">
+                        {{ item.label | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/contacts" routerLinkActive="active" (click)="closeMobileMenu()">
+                        {{ 'BOOK_TRIAL' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/teacher-application" routerLinkActive="active" (click)="closeMobileMenu()">Apply As Teacher</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-mobile-controls">
+            <button
+            type="button"
+            class="mobile-toggle"
+            (click)="toggleMobileMenu()"
+            [class.active]="!isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="primary-navigation"
+            [attr.aria-label]="currentLanguage === 'ar' ? (!isCollapsed ? 'Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©' : 'ÙØªØ­ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©') : (!isCollapsed ? 'Close main menu' : 'Open main menu')"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+

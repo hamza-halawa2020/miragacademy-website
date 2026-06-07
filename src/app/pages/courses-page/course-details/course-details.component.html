@@ -1,0 +1,34 @@
+<section class="course-details-area">
+    <div class="container">
+        <div class="text-center py-5" *ngIf="isLoading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div *ngIf="!isLoading && course">
+            <div class="details-hero animate__animated animate__fadeIn">
+                <div class="details-header">
+                    <img [src]="course.image_url" [alt]="course.title" class="main-img">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="animate__animated animate__fadeInUp">{{ course.title }}</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <div class="content-section" *ngIf="course.description">
+                    <div class="content-body" [innerHTML]="processedDescription"></div>
+                </div>
+            </div>
+
+            <div class="back-btn-container animate__animated animate__fadeInUp" style="animation-delay: 0.35s;">
+                <a routerLink="/courses" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    {{ 'BACK_TO_COURSES' | translate }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

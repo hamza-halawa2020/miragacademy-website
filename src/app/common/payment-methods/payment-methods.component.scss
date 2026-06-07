@@ -1,0 +1,107 @@
+.payment-methods-section {
+    padding: 72px 0;
+}
+
+.section-head {
+    margin-bottom: 28px;
+
+    h2 {
+        margin: 0;
+        font-size: clamp(1.35rem, 2.6vw, 2rem);
+        font-weight: 800;
+        color: #123524;
+    }
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.payment-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 90, 58, 0.14);
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(9, 20, 14, 0.05);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        border-color: rgba(15, 90, 58, 0.3);
+    }
+
+    p {
+        margin: 0;
+        color: #0f2f22;
+        font-size: 0.94rem;
+        font-weight: 600;
+        line-height: 1.35;
+    }
+}
+
+.icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(26, 122, 82, 0.12);
+    color: #0f5a3a;
+    flex-shrink: 0;
+
+    i {
+        font-size: 0.95rem;
+    }
+}
+
+.payment-note {
+    margin-top: 18px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 90, 58, 0.18);
+    background: rgba(248, 255, 250, 0.9);
+    color: #2f4d3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    i {
+        color: #0f5a3a;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .payment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .payment-methods-section {
+        padding: 52px 0;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .payment-card {
+        padding: 12px;
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
