@@ -81,7 +81,7 @@
                         <span>{{ feature }}</span>
                     </li>
                 </ul>
-                <a routerLink="/contacts" [queryParams]="{ plan: plan.title }" class="choose-btn">Choose Plan</a>
+                <a routerLink="/contacts" [queryParams]="{ pricing_plan_id: plan.id, plan: plan.title }" class="choose-btn">Choose Plan</a>
             </article>
         </div>
     </div>

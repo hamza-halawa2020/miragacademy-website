@@ -6,6 +6,15 @@ import { auditTime } from 'rxjs/operators';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { OrnamentCornersComponent } from '../../shared/components/ornament-corners/ornament-corners.component';
 
+interface NavbarItem {
+    label: string;
+    route?: string;
+    children?: Array<{
+        label: string;
+        route: string;
+    }>;
+}
+
 @Component({
     selector: 'app-navbar',
     standalone: true,
@@ -26,12 +35,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     isSticky: boolean = false;
     currentLanguage: string = 'en';
     private subscriptions = new Subscription();
-    menuItems = [
+    menuItems: NavbarItem[] = [
         {
             label: 'HOME',
             route: '/'
         },
-
         {
             label: 'Courses',
             route: '/courses'
@@ -44,19 +52,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
             label: 'TEACHERS',
             route: '/teachers'
         },
-        // {
-        //     label: 'Certificates',
-        //     route: '/certificates'
-        // },
-        // {
-
-        //     label: 'Articles',
-        //     route: '/posts'
-        // },
-        // {
-        //     label: 'MEDIA_GALLERY.TITLE',
-        //     route: '/media'
-        // },
         {
             label: 'TESTIMONIALS',
             route: '/testimonials'
@@ -65,7 +60,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
             label: 'About',
             route: '/about'
         },
-
+        // {
+        //     label: 'More',
+        //     children: [
+        //         {
+        //             label: 'Articles',
+        //             route: '/posts'
+        //         },
+        //         {
+        //             label: 'MEDIA_GALLERY.TITLE',
+        //             route: '/media'
+        //         },
+        //         {
+        //             label: 'Certificates',
+        //             route: '/certificates'
+        //         },
+        //     ],
+        // },
     ];
     languages = [
         {
@@ -143,6 +154,17 @@ export class NavbarComponent implements OnInit, OnDestroy {
     getCurrentLanguageData() {
         return this.languages.find(lang => lang.code === this.currentLanguage) || this.languages[0];
     }
+
+    isMenuItemActive(item: NavbarItem): boolean {
+        if (item.route) {
+            return item.route === '/'
+                ? this.router.url === '/'
+                : this.router.url.startsWith(item.route);
+        }
+
+        return item.children?.some(child => this.router.url.startsWith(child.route)) || false;
+    }
+
     private applyLanguageDirection(lang: string) {
         const htmlElement = document.documentElement;
         const bodyElement = document.body;

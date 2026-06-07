@@ -19,21 +19,33 @@
         
         <div id="primary-navigation" class="navbar-menu" [class.active]="!isCollapsed">
             <ul class="nav-links">
-                <li *ngFor="let item of menuItems">
-                    <a [routerLink]="item.route" routerLinkActive="active"
+                <li *ngFor="let item of menuItems" [class.has-dropdown]="item.children?.length">
+                    <a *ngIf="item.route" [routerLink]="item.route" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: item.route === '/'}" (click)="closeMobileMenu()">
                         {{ item.label | translate }}
                     </a>
-                </li>
-                <li>
-                    <a routerLink="/contacts" routerLinkActive="active" (click)="closeMobileMenu()">
-                        {{ 'BOOK_TRIAL' | translate }}
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/teacher-application" routerLinkActive="active" (click)="closeMobileMenu()">Apply As Teacher</a>
+                    <button *ngIf="item.children?.length" type="button" class="nav-dropdown-toggle" [class.active]="isMenuItemActive(item)">
+                        {{ item.label | translate }}
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul *ngIf="item.children?.length" class="dropdown-links">
+                        <li *ngFor="let child of item.children">
+                            <a [routerLink]="child.route" routerLinkActive="active" (click)="closeMobileMenu()">
+                                {{ child.label | translate }}
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+
+            <div class="navbar-actions">
+                <a routerLink="/teacher-application" routerLinkActive="active" class="nav-action secondary" (click)="closeMobileMenu()">
+                    Apply as Teacher
+                </a>
+                <a routerLink="/contacts" routerLinkActive="active" class="nav-action primary" (click)="closeMobileMenu()">
+                    {{ 'BOOK_TRIAL' | translate }}
+                </a>
+            </div>
         </div>
 
         <div class="navbar-mobile-controls">

@@ -242,6 +242,28 @@ $text-color: var(--paragraphColor);
         }
     }
 }
+
+.selected-plan-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    padding: 13px 16px;
+    border-radius: 16px;
+    color: var(--primaryColor);
+    background: rgba(251, 247, 239, 0.94);
+    border: 1px solid rgba(184, 137, 61, 0.2);
+    font-weight: 600;
+
+    i {
+        color: var(--secondaryColor);
+    }
+
+    strong {
+        color: var(--primaryColor);
+        font-weight: 900;
+    }
+}
 .toast-container {
     .toast {
         border: none;

@@ -1,6 +1,6 @@
 import { CommonModule, NgClass, NgIf } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { ContactService } from './contact.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import {
@@ -29,6 +29,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     isSubmitting: boolean = false;
     categories: any[] = [];
     courses: any[] = [];
+    selectedPlanTitle = '';
     private itiReady: Promise<unknown> = Promise.resolve();
     private iti?: {
         getNumber: () => string;
@@ -43,6 +44,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
 
     constructor(
         public router: Router,
+        private route: ActivatedRoute,
         private contactService: ContactService,
         private coursesService: CoursesService,
         private fb: FormBuilder,
@@ -56,11 +58,18 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
             country: ['', [Validators.required]],
             course_category_id: ['', [Validators.required]],
             course: ['', [Validators.required]],
+            pricing_plan_id: [''],
             message: ['', [Validators.required, Validators.minLength(10)]],
         });
     }
 
     ngOnInit(): void {
+        this.route.queryParamMap.subscribe((params) => {
+            const pricingPlanId = params.get('pricing_plan_id') || '';
+            this.selectedPlanTitle = params.get('plan') || '';
+            this.contactForm.patchValue({ pricing_plan_id: pricingPlanId }, { emitEvent: false });
+        });
+
         this.coursesService.getCourseCategories().subscribe({
             next: (response: any) => {
                 this.categories = response?.data || [];
@@ -158,6 +167,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
 
         const payload = {
             ...this.contactForm.value,
+            pricing_plan_id: this.contactForm.value.pricing_plan_id || null,
             phone: formattedPhone || fallbackPhone,
         };
 
@@ -167,6 +177,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
                     this.successMessage = translation;
                 });
                 this.contactForm.reset();
+                this.contactForm.patchValue({ pricing_plan_id: this.route.snapshot.queryParamMap.get('pricing_plan_id') || '' }, { emitEvent: false });
                 this.isSubmitting = false;
                 setTimeout(() => {
                     this.successMessage = '';
