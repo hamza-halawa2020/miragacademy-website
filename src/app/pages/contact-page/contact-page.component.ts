@@ -6,6 +6,7 @@ import { SettingService, Settings } from '../../shared/services/setting.service'
 import { Subscription } from 'rxjs';
 import { NgIf, NgFor } from '@angular/common';
 import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-contact-page',
@@ -16,7 +17,8 @@ import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.c
         TranslateModule,
         NgIf,
         NgFor,
-        PageHeroComponent
+        PageHeroComponent,
+        HelpCtaComponent
     ],
     templateUrl: './contact-page.component.html',
     styleUrl: './contact-page.component.scss',

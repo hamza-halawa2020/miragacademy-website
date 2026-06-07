@@ -62,8 +62,7 @@
 }
 
 .pricing-intro,
-.pricing-plans,
-.pricing-cta {
+.pricing-plans {
     padding: clamp(56px, 8vw, 92px) 0;
 }
 
@@ -269,31 +268,6 @@
     animation: pricingPulse 1.3s ease-in-out infinite;
 }
 
-.cta-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: clamp(28px, 5vw, 46px);
-    border-radius: 30px;
-    background:
-        radial-gradient(circle at top right, rgba(231, 200, 121, 0.24), transparent 36%),
-        #fff;
-    border: 1px solid var(--borderSoftColor);
-    box-shadow: var(--shadowSoft);
-
-    h2 {
-        color: var(--primaryColor);
-        margin: 8px 0;
-    }
-
-    p {
-        color: var(--paragraphColor);
-        margin: 0;
-        max-width: 680px;
-    }
-}
-
 @keyframes pricingPulse {
     0% {
         background-position: 120% 0;
@@ -320,14 +294,12 @@
         text-align: start;
     }
 
-    .hero-actions,
-    .cta-card {
+    .hero-actions {
         align-items: stretch;
         flex-direction: column;
     }
 
-    .hero-actions .btn,
-    .cta-card .btn {
+    .hero-actions .btn {
         width: 100%;
     }
 }

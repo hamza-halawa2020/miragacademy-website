@@ -4,11 +4,12 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ReviewsService } from '../reviews-page/reviews.service';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
   selector: 'app-add-review-page',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslateModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule, HelpCtaComponent],
   templateUrl: './add-review-page.component.html',
   styleUrl: './add-review-page.component.scss'
 })

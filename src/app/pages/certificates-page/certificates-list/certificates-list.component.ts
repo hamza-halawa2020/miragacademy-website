@@ -5,11 +5,12 @@ import { CertificatesService } from '../certificates.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-certificates-list',
     standalone: true,
-    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, PageHeroComponent],
+    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, PageHeroComponent, HelpCtaComponent],
     templateUrl: './certificates-list.component.html',
     styleUrls: ['./certificates-list.component.scss']
 })

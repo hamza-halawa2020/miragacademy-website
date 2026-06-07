@@ -4,11 +4,12 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TeacherApplicationService } from './teacher-application.service';
 import intlTelInput from 'intl-tel-input';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-teacher-application-page',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, TranslateModule],
+    imports: [CommonModule, ReactiveFormsModule, TranslateModule, HelpCtaComponent],
     templateUrl: './teacher-application-page.component.html',
     styleUrl: './teacher-application-page.component.scss',
 })

@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-about-page',
@@ -15,7 +16,8 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         TranslateModule,
         NgIf,
         PageHeroComponent,
-        SectionHeadingComponent
+        SectionHeadingComponent,
+        HelpCtaComponent
     ],
     templateUrl: './about-page.component.html',
     styleUrls: ['./about-page.component.scss'],

@@ -4,11 +4,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SettingService, Settings } from '../../shared/services/setting.service';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-terms-conditions-page',
     standalone: true,
-    imports: [RouterLink, TranslateModule, NgIf],
+    imports: [RouterLink, TranslateModule, NgIf, HelpCtaComponent],
     templateUrl: './terms-conditions-page.component.html',
     styleUrl: './terms-conditions-page.component.scss'
 })

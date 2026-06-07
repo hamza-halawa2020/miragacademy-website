@@ -4,11 +4,12 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CoursesService } from '../courses.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from '../../../../environments/environment';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-course-details',
     standalone: true,
-    imports: [CommonModule, TranslateModule, RouterLink],
+    imports: [CommonModule, TranslateModule, RouterLink, HelpCtaComponent],
     templateUrl: './course-details.component.html',
     styleUrls: ['./course-details.component.scss']
 })

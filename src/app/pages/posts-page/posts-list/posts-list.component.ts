@@ -6,11 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { ContentCardComponent } from '../../../shared/components/content-card/content-card.component';
 import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-posts-list',
     standalone: true,
-    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ContentCardComponent, PageHeroComponent],
+    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ContentCardComponent, PageHeroComponent, HelpCtaComponent],
     templateUrl: './posts-list.component.html',
     styleUrls: ['./posts-list.component.scss']
 })

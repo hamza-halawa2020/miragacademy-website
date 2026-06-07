@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PostsService } from '../posts.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-post-details',
     standalone: true,
-    imports: [CommonModule, TranslateModule, RouterLink],
+    imports: [CommonModule, TranslateModule, RouterLink, HelpCtaComponent],
     templateUrl: './post-details.component.html',
     styleUrls: ['./post-details.component.scss']
 })

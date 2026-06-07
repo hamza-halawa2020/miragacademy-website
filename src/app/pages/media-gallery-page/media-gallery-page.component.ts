@@ -6,6 +6,7 @@ import { MediaGalleryService } from './media-gallery.service';
 import { ActivatedRoute } from '@angular/router';
 import { PaginationComponent } from '../../shared/components/pagination/pagination.component';
 import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 interface MediaItem {
   id: number;
@@ -21,7 +22,7 @@ interface MediaItem {
 @Component({
   selector: 'app-media-gallery-page',
   standalone: true,
-  imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent],
+  imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent, HelpCtaComponent],
   templateUrl: './media-gallery-page.component.html',
   styleUrl: './media-gallery-page.component.scss'
 })

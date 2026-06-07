@@ -4,11 +4,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { TeachersService } from '../teachers.service';
 import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-teachers-list',
     standalone: true,
-    imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent],
+    imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent, HelpCtaComponent],
     templateUrl: './teachers-list.component.html',
     styleUrl: './teachers-list.component.scss'
 })

@@ -7,11 +7,12 @@ import { PaginationComponent } from '../../../shared/components/pagination/pagin
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
 import { SectionHeadingComponent } from '../../../shared/components/section-heading/section-heading.component';
+import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
 
 @Component({
   selector: 'app-reviews-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ReactiveFormsModule, PageHeroComponent, SectionHeadingComponent],
+  imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ReactiveFormsModule, PageHeroComponent, SectionHeadingComponent, HelpCtaComponent],
   templateUrl: './reviews-list.component.html',
   styleUrls: ['./reviews-list.component.scss']
 })

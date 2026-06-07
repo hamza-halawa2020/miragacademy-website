@@ -4,11 +4,12 @@ import { RouterLink } from '@angular/router';
 import { PricingPlan, PricingService } from './pricing.service';
 import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
+import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
 
 @Component({
     selector: 'app-pricing-page',
     standalone: true,
-    imports: [CommonModule, RouterLink, PageHeroComponent, SectionHeadingComponent],
+    imports: [CommonModule, RouterLink, PageHeroComponent, SectionHeadingComponent, HelpCtaComponent],
     templateUrl: './pricing-page.component.html',
     styleUrl: './pricing-page.component.scss',
 })
