@@ -65,6 +65,46 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
     private homeDataObserver?: IntersectionObserver;
     private languageSubscription?: Subscription;
     seoFaqItems: Array<{ question: string; answer: string }> = [];
+    whyUsItems = [
+        {
+            icon: 'fa-solid fa-user',
+            title: 'Expert Native Arabic Scholars',
+            description: 'Learn with qualified teachers who explain Quran, Tajweed, Arabic, and Islamic studies clearly.'
+        },
+        {
+            icon: 'fa-solid fa-check',
+            title: 'One-to-One Learning',
+            description: 'Private classes built around the learner’s age, level, pace, and personal learning goal.'
+        },
+        {
+            icon: 'fa-solid fa-chalkboard-user',
+            title: 'Certified Tutors',
+            description: 'Structured lessons with caring instructors and continuous progress follow-up.'
+        },
+        {
+            icon: 'fa-solid fa-video',
+            title: 'Live Online Classes',
+            description: 'Interactive online sessions from home with flexible scheduling for busy families.'
+        },
+        {
+            icon: 'fa-solid fa-hand-holding-heart',
+            title: 'Supportive Care',
+            description: 'Our team helps you choose the right teacher, plan, and schedule before enrollment.'
+        },
+        {
+            icon: 'fa-solid fa-star-and-crescent',
+            title: 'Spiritual Journey',
+            description: 'A calm and encouraging environment that connects knowledge with purpose and adab.'
+        },
+    ];
+    expertiseItems = [
+        'Easy communication with teachers who can support English-speaking learners.',
+        'Programs for kids, adults, beginners, and advanced students.',
+        'Quran recitation, memorization, Tajweed, Arabic, and Islamic studies in one place.',
+        'Flexible weekly plans connected with clear monthly pricing.',
+        'Female teachers available for sisters and young learners when needed.',
+        'Fun, engaging learning with practical homework and progress notes.',
+    ];
 
     defaultStats = {
         completedStudies: 1500,  // Students graduated

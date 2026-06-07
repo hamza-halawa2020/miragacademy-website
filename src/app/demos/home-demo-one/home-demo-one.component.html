@@ -5,6 +5,27 @@
 
     <div #homeDataTrigger class="home-data-trigger" aria-hidden="true"></div>
 
+    <section class="home-block home-block-surface home-why" scrollReveal>
+        <div class="container">
+            <div class="home-section-heading">
+                <span>Why Us?</span>
+                <h2>We Provide a Different Learning Journey</h2>
+                <p>Everything is designed to make online Quran learning personal, clear, spiritual, and easy to continue.</p>
+            </div>
+            <div class="why-grid">
+                @for (item of whyUsItems; track item.title) {
+                <article class="why-card">
+                    <div class="why-icon">
+                        <i [class]="item.icon"></i>
+                    </div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </article>
+                }
+            </div>
+        </div>
+    </section>
+
     @defer (on viewport) {
     <section class="home-block home-block-surface" scrollReveal>
         <div class="container">
@@ -15,15 +36,26 @@
     <div class="home-defer-placeholder" style="--home-defer-min-h: 420px"></div>
     }
 
-    @defer (on viewport) {
-    <section class="home-block home-block-soft" scrollReveal [revealDelay]="60">
+    <section class="home-block home-block-soft home-expertise" scrollReveal [revealDelay]="60">
         <div class="container">
-            <app-learning-benefits-section></app-learning-benefits-section>
+            <div class="expertise-layout">
+                <div class="expertise-copy">
+                    <span>Our Expertise</span>
+                    <h2>Unlock the Best Way to Learn Quran Online & Arabic</h2>
+                    <p>Mirag Academy combines qualified teachers, personalized scheduling, and a calm online experience so learners can build confidence step by step.</p>
+                    <a routerLink="/courses" class="expertise-link">Explore Programs</a>
+                </div>
+                <div class="expertise-list">
+                    @for (item of expertiseItems; track item) {
+                    <div class="expertise-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>{{ item }}</span>
+                    </div>
+                    }
+                </div>
+            </div>
         </div>
     </section>
-    } @placeholder {
-    <div class="home-defer-placeholder" style="--home-defer-min-h: 420px"></div>
-    }
 
     @defer (on viewport) {
     <section class="home-block home-block-surface" scrollReveal [revealDelay]="60">
@@ -34,6 +66,17 @@
     } @placeholder {
     <div class="home-defer-placeholder" style="--home-defer-min-h: 420px"></div>
     }
+
+    <section class="home-block home-block-stats" scrollReveal [revealDelay]="60">
+        <div class="container">
+            <div class="home-section-heading light">
+                <span>Our Statistics</span>
+                <h2>Mirag Academy in Numbers</h2>
+                <p>Numbers that reflect consistent learning, caring teachers, and families who trust the journey.</p>
+            </div>
+            <app-stats-section [stats]="homeData?.stats || defaultStats"></app-stats-section>
+        </div>
+    </section>
 
     <!-- @defer (on viewport) {
     <section class="home-block home-block-soft" scrollReveal [revealDelay]="60">
