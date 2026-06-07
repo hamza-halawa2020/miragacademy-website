@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PricingPlan, PricingService } from './pricing.service';
+import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
+import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
 
 @Component({
     selector: 'app-pricing-page',
     standalone: true,
-    imports: [CommonModule, RouterLink],
+    imports: [CommonModule, RouterLink, PageHeroComponent, SectionHeadingComponent],
     templateUrl: './pricing-page.component.html',
     styleUrl: './pricing-page.component.scss',
 })

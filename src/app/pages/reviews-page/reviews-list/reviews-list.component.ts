@@ -5,11 +5,13 @@ import { ReviewsService } from '../reviews.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
+import { SectionHeadingComponent } from '../../../shared/components/section-heading/section-heading.component';
 
 @Component({
   selector: 'app-reviews-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ReactiveFormsModule],
+  imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ReactiveFormsModule, PageHeroComponent, SectionHeadingComponent],
   templateUrl: './reviews-list.component.html',
   styleUrls: ['./reviews-list.component.scss']
 })

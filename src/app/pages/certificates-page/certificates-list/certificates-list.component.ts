@@ -4,11 +4,12 @@ import { RouterLink } from '@angular/router';
 import { CertificatesService } from '../certificates.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
+import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
 
 @Component({
     selector: 'app-certificates-list',
     standalone: true,
-    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent],
+    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, PageHeroComponent],
     templateUrl: './certificates-list.component.html',
     styleUrls: ['./certificates-list.component.scss']
 })

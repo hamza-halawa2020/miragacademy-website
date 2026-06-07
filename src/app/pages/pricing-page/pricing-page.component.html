@@ -1,16 +1,12 @@
-<section class="pricing-hero">
-    <div class="container">
-        <span class="eyebrow">Our Pricing</span>
-        <h1>Flexible Quran Learning Plans</h1>
-        <p>
-            Choose a monthly package that fits your family schedule. Each plan includes live online classes with qualified teachers, clear progress follow-up, and no hidden fees.
-        </p>
-        <div class="hero-actions">
-            <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
-            <a href="#pricing-plans" class="btn btn-outline-primary">View Plans</a>
-        </div>
+<app-page-hero
+    eyebrow="Our Pricing"
+    title="Flexible Quran Learning Plans"
+    description="Choose a monthly package that fits your family schedule. Each plan includes live online classes with qualified teachers, clear progress follow-up, and no hidden fees.">
+    <div class="hero-actions">
+        <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
+        <!-- <a href="#pricing-plans" class="btn btn-outline-primary">View Plans</a> -->
     </div>
-</section>
+</app-page-hero>
 
 <section class="pricing-intro">
     <div class="container">
@@ -39,11 +35,11 @@
 
 <section id="pricing-plans" class="pricing-plans">
     <div class="container">
-        <div class="section-heading">
-            <span class="eyebrow">Choose Your Package</span>
-            <h2>Monthly Class Plans</h2>
-            <p>All plans are suitable for Quran, Tajweed, Arabic, and Islamic studies programs.</p>
-        </div>
+        <app-section-heading
+            eyebrow="Choose Your Package"
+            title="Monthly Class Plans"
+            description="All plans are suitable for Quran, Tajweed, Arabic, and Islamic studies programs.">
+        </app-section-heading>
 
         <div class="plans-grid" *ngIf="isLoading">
             <div class="plan-card skeleton-card" *ngFor="let item of [1,2,3,4,5,6]"></div>

@@ -1,13 +1,18 @@
 <section class="reviews-page">
-    <div class="container">
-        <div class="reviews-hero">
-            <h1>{{ 'CLIENT_TESTIMONIALS' | translate }}</h1>
-            <p>{{ 'TESTIMONIALS_DESC' | translate }}</p>
-        </div>
+    <app-page-hero
+        eyebrow="Testimonials"
+        [title]="'CLIENT_TESTIMONIALS' | translate"
+        [description]="'TESTIMONIALS_DESC' | translate">
+    </app-page-hero>
 
+    <div class="container">
         <section class="review-form-section">
             <div class="review-form-card">
-                <h2>{{ 'ADD_REVIEW_TITLE' | translate }}</h2>
+                <app-section-heading
+                    eyebrow="Share Feedback"
+                    [title]="'ADD_REVIEW_TITLE' | translate"
+                    align="start">
+                </app-section-heading>
 
                 <div class="alert alert-success" *ngIf="submitSuccess">
                     {{ 'ADD_REVIEW_SUCCESS_MESSAGE' | translate }}

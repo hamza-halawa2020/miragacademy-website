@@ -1,8 +1,11 @@
-<section class="teachers-page">
+﻿<section class="teachers-page">
+    <app-page-hero
+        eyebrow="Teachers"
+        [title]="'OUR_TEACHERS' | translate"
+        description="Meet qualified teachers who guide Quran, Tajweed, Arabic, and Islamic studies with care.">
+    </app-page-hero>
+
     <div class="container">
-        <div class="section-title text-center">
-            <h1>{{ 'OUR_TEACHERS' | translate }}</h1>
-        </div>
 
         <div class="row" *ngIf="isLoading">
             <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of [1,2,3,4,5,6]">
@@ -27,3 +30,5 @@
         <app-pagination [meta]="meta" (pageChange)="onPageChange($event)" *ngIf="meta"></app-pagination>
     </div>
 </section>
+
+

@@ -4,6 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SettingService, Settings } from '../../shared/services/setting.service';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
+import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
+import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
 
 @Component({
     selector: 'app-about-page',
@@ -11,7 +13,9 @@ import { NgIf } from '@angular/common';
     imports: [
         RouterLink,
         TranslateModule,
-        NgIf
+        NgIf,
+        PageHeroComponent,
+        SectionHeadingComponent
     ],
     templateUrl: './about-page.component.html',
     styleUrls: ['./about-page.component.scss'],

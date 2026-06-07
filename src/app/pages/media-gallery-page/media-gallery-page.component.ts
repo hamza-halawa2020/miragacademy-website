@@ -5,6 +5,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MediaGalleryService } from './media-gallery.service';
 import { ActivatedRoute } from '@angular/router';
 import { PaginationComponent } from '../../shared/components/pagination/pagination.component';
+import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
 
 interface MediaItem {
   id: number;
@@ -20,7 +21,7 @@ interface MediaItem {
 @Component({
   selector: 'app-media-gallery-page',
   standalone: true,
-  imports: [CommonModule, TranslateModule, PaginationComponent],
+  imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent],
   templateUrl: './media-gallery-page.component.html',
   styleUrl: './media-gallery-page.component.scss'
 })

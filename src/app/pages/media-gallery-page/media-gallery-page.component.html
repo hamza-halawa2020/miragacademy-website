@@ -1,10 +1,11 @@
 <section class="media-page">
-    <div class="container">
-        <div class="media-hero">
-            <h4>{{ 'MEDIA_GALLERY.TITLE' | translate }}</h4>
-            <p>{{ 'MEDIA_GALLERY.SUBTITLE' | translate }}</p>
-        </div>
+    <app-page-hero
+        eyebrow="Media Gallery"
+        [title]="'MEDIA_GALLERY.TITLE' | translate"
+        [description]="'MEDIA_GALLERY.SUBTITLE' | translate">
+    </app-page-hero>
 
+    <div class="container">
         <div class="media-filters">
             <button type="button" class="filter-btn" [class.active]="activeFilter === 'all'" (click)="filterMedia('all')">
                 {{ 'MEDIA_GALLERY.ALL' | translate }}

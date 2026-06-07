@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SettingService, Settings } from '../../shared/services/setting.service';
 import { Subscription } from 'rxjs';
 import { NgIf, NgFor } from '@angular/common';
+import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
 
 @Component({
     selector: 'app-contact-page',
@@ -14,7 +15,8 @@ import { NgIf, NgFor } from '@angular/common';
         ContactComponent,
         TranslateModule,
         NgIf,
-        NgFor
+        NgFor,
+        PageHeroComponent
     ],
     templateUrl: './contact-page.component.html',
     styleUrl: './contact-page.component.scss',

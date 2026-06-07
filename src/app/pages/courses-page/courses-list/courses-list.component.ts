@@ -5,11 +5,12 @@ import { CoursesService } from '../courses.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { ContentCardComponent } from '../../../shared/components/content-card/content-card.component';
+import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
 
 @Component({
     selector: 'app-courses-list',
     standalone: true,
-    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ContentCardComponent],
+    imports: [CommonModule, RouterLink, TranslateModule, PaginationComponent, ContentCardComponent, PageHeroComponent],
     templateUrl: './courses-list.component.html',
     styleUrls: ['./courses-list.component.scss']
 })

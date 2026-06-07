@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaginationComponent } from '../../../shared/components/pagination/pagination.component';
 import { TeachersService } from '../teachers.service';
+import { PageHeroComponent } from '../../../shared/components/page-hero/page-hero.component';
 
 @Component({
     selector: 'app-teachers-list',
     standalone: true,
-    imports: [CommonModule, TranslateModule, PaginationComponent],
+    imports: [CommonModule, TranslateModule, PaginationComponent, PageHeroComponent],
     templateUrl: './teachers-list.component.html',
     styleUrl: './teachers-list.component.scss'
 })

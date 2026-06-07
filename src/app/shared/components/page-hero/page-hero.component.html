@@ -1,0 +1,10 @@
+<section class="shared-page-hero" [class.align-start]="align === 'start'">
+    <div class="container">
+        <span class="hero-eyebrow" *ngIf="eyebrow">{{ eyebrow }}</span>
+        <h1>{{ title }}</h1>
+        <p *ngIf="description">{{ description }}</p>
+        <div class="hero-content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</section>
