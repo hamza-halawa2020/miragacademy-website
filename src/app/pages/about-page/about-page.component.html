@@ -1,11 +1,6 @@
-<app-page-hero
-    eyebrow="Mirag Academy"
-    [title]="'ABOUT_US' | translate"
-    [description]="'WHY_CHOOSE_PENN' | translate">
-    <div class="about-quick-points">
-        <p><i class="fa-solid fa-check"></i> Live one-to-one and group sessions</p>
-        <p><i class="fa-solid fa-check"></i> Structured paths for all levels</p>
-        <p><i class="fa-solid fa-check"></i> Friendly support with steady follow-up</p>
+<app-page-hero eyebrow="Mirag Academy" [title]="'ABOUT_US' | translate" [description]="'WHY_CHOOSE_PENN' | translate">
+    <div class="hero-actions">
+        <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
     </div>
 </app-page-hero>
 
@@ -16,20 +11,20 @@
         </div>
 
         <section class="features-section">
-            <app-section-heading
-                eyebrow="Why Us"
-                title="Why Families Choose Us"
+            <app-section-heading eyebrow="Why Us" title="Why Families Choose Us"
                 description="Simple systems, caring teachers, and consistent progress.">
             </app-section-heading>
             <div class="features-grid">
                 <article class="feature-card">
-                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-book-quran"></i></span></div>
+                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-book-quran"></i></span>
+                    </div>
                     <h3>{{ 'LEARN_ANYWHERE' | translate }}</h3>
                     <p>{{ 'LEARN_ANYWHERE_DESC' | translate }}</p>
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></span></div>
+                    <div class="feature-top"><span class="feature-icon"><i
+                                class="fa-solid fa-chalkboard-user"></i></span></div>
                     <h3>{{ 'EXPERT_INSTRUCTOR' | translate }}</h3>
                     <p>{{ 'EXPERT_INSTRUCTOR_DESC' | translate }}</p>
                 </article>
@@ -41,19 +36,22 @@
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-clipboard-list"></i></span></div>
+                    <div class="feature-top"><span class="feature-icon"><i
+                                class="fa-solid fa-clipboard-list"></i></span></div>
                     <h3>{{ 'COURSE_PLANNING' | translate }}</h3>
                     <p>{{ 'COURSE_PLANNING_DESC' | translate }}</p>
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-chart-line"></i></span></div>
+                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    </div>
                     <h3>{{ 'TEACHER_MONITORING' | translate }}</h3>
                     <p>{{ 'TEACHER_MONITORING_DESC' | translate }}</p>
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-top"><span class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></span></div>
+                    <div class="feature-top"><span class="feature-icon"><i
+                                class="fa-solid fa-hand-holding-heart"></i></span></div>
                     <h3>{{ 'STRONG_SUPPORT' | translate }}</h3>
                     <p>{{ 'STRONG_SUPPORT_DESC' | translate }}</p>
                 </article>

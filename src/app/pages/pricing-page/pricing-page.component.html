@@ -1,6 +1,4 @@
-<app-page-hero
-    eyebrow="Our Pricing"
-    title="Flexible Quran Learning Plans"
+<app-page-hero eyebrow="Our Pricing" title="Flexible Quran Learning Plans"
     description="Choose a monthly package that fits your family schedule. Each plan includes live online classes with qualified teachers, clear progress follow-up, and no hidden fees.">
     <div class="hero-actions">
         <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
@@ -14,19 +12,22 @@
             <article>
                 <h2>Learn Quran Online from Home</h2>
                 <p>
-                    Start a consistent learning journey for Quran recitation, memorization, Tajweed, Arabic language, or Islamic studies. Our plans are designed for kids and adults with flexible weekly schedules.
+                    Start a consistent learning journey for Quran recitation, memorization, Tajweed, Arabic language, or
+                    Islamic studies. Our plans are designed for kids and adults with flexible weekly schedules.
                 </p>
             </article>
             <article>
                 <h3>Simple Monthly Packages</h3>
                 <p>
-                    Select the number of classes you need each month. You can begin with a light schedule or increase your learning pace whenever you are ready.
+                    Select the number of classes you need each month. You can begin with a light schedule or increase
+                    your learning pace whenever you are ready.
                 </p>
             </article>
             <article>
                 <h3>No Hidden Fees</h3>
                 <p>
-                    Transparent monthly pricing, live sessions, and support from our team to help you choose the right plan before enrollment.
+                    Transparent monthly pricing, live sessions, and support from our team to help you choose the right
+                    plan before enrollment.
                 </p>
             </article>
         </div>
@@ -35,9 +36,7 @@
 
 <section id="pricing-plans" class="pricing-plans">
     <div class="container">
-        <app-section-heading
-            eyebrow="Choose Your Package"
-            title="Monthly Class Plans"
+        <app-section-heading eyebrow="Choose Your Package" title="Monthly Class Plans"
             description="All plans are suitable for Quran, Tajweed, Arabic, and Islamic studies programs.">
         </app-section-heading>
 
@@ -71,7 +70,8 @@
                         <span class="stat-label">Minutes / class</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-value">{{ plan.price_per_class ? formatMoney(plan.price_per_class, plan.currency) : '-' }}</span>
+                        <span class="stat-value">{{ plan.price_per_class ? formatMoney(plan.price_per_class,
+                            plan.currency) : '-' }}</span>
                         <span class="stat-label">Price / class</span>
                     </div>
                 </div>

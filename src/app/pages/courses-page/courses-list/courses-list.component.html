@@ -1,26 +1,21 @@
 ﻿<section class="courses-area">
-    <app-page-hero
-        eyebrow="Courses"
-        [title]="'OUR_COURSES' | translate"
+    <app-page-hero eyebrow="Courses" [title]="'OUR_COURSES' | translate"
         description="Choose the Quran, Tajweed, Arabic, or Islamic studies path that fits your current level.">
+
+        <div class="hero-actions">
+            <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
+        </div>
     </app-page-hero>
 
     <div class="container mt-5">
 
         <div class="category-filters" *ngIf="categories.length > 0">
-            <button
-                type="button"
-                class="category-chip"
-                [class.active]="isCategoryActive(null)"
+            <button type="button" class="category-chip" [class.active]="isCategoryActive(null)"
                 (click)="onCategoryChange(null)">
                 {{ 'ALL_COURSE_CATEGORIES' | translate }}
             </button>
-            <button
-                type="button"
-                class="category-chip"
-                *ngFor="let category of categories"
-                [class.active]="isCategoryActive(category.id)"
-                (click)="onCategoryChange(category.id)">
+            <button type="button" class="category-chip" *ngFor="let category of categories"
+                [class.active]="isCategoryActive(category.id)" (click)="onCategoryChange(category.id)">
                 {{ category.name }}
             </button>
         </div>
@@ -44,9 +39,7 @@
             </div>
         </div>
 
-        
+
         <app-pagination [meta]="meta" (pageChange)="onPageChange($event)"></app-pagination>
     </div>
 </section>
-
-

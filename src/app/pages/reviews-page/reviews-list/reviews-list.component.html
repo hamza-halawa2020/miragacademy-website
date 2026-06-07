@@ -1,17 +1,16 @@
 <section class="reviews-page">
-    <app-page-hero
-        eyebrow="Testimonials"
-        [title]="'CLIENT_TESTIMONIALS' | translate"
+    <app-page-hero eyebrow="Testimonials" [title]="'CLIENT_TESTIMONIALS' | translate"
         [description]="'TESTIMONIALS_DESC' | translate">
+
+        <div class="hero-actions">
+            <a routerLink="/contacts" class="btn btn-primary">Book a Trial Class</a>
+        </div>
     </app-page-hero>
 
     <div class="container">
         <section class="review-form-section">
             <div class="review-form-card">
-                <app-section-heading
-                    eyebrow="Share Feedback"
-                    [title]="'ADD_REVIEW_TITLE' | translate"
-                    align="start">
+                <app-section-heading eyebrow="Share Feedback" [title]="'ADD_REVIEW_TITLE' | translate" align="start">
                 </app-section-heading>
 
                 <div class="alert alert-success" *ngIf="submitSuccess">
@@ -26,17 +25,14 @@
                     <div class="">
                         <div class="form-group">
                             <label for="name">{{ 'ADD_REVIEW_NAME' | translate }}</label>
-                            <input
-                                id="name"
-                                type="text"
-                                class="form-control"
-                                formControlName="name"
+                            <input id="name" type="text" class="form-control" formControlName="name"
                                 [placeholder]="'ADD_REVIEW_NAME_PLACEHOLDER' | translate"
-                                [class.is-invalid]="name?.invalid && name?.touched"
-                            />
+                                [class.is-invalid]="name?.invalid && name?.touched" />
                             <small class="field-error" *ngIf="name?.invalid && name?.touched">
-                                <span *ngIf="name?.errors?.['required']">{{ 'ADD_REVIEW_NAME_REQUIRED' | translate }}</span>
-                                <span *ngIf="name?.errors?.['maxlength']">{{ 'ADD_REVIEW_NAME_MAX_LENGTH' | translate }}</span>
+                                <span *ngIf="name?.errors?.['required']">{{ 'ADD_REVIEW_NAME_REQUIRED' | translate
+                                    }}</span>
+                                <span *ngIf="name?.errors?.['maxlength']">{{ 'ADD_REVIEW_NAME_MAX_LENGTH' | translate
+                                    }}</span>
                             </small>
                         </div>
 
@@ -44,17 +40,14 @@
 
                     <div class="form-group">
                         <label for="review">{{ 'ADD_REVIEW_REVIEW' | translate }}</label>
-                        <textarea
-                            id="review"
-                            rows="5"
-                            class="form-control"
-                            formControlName="review"
+                        <textarea id="review" rows="5" class="form-control" formControlName="review"
                             [placeholder]="'ADD_REVIEW_REVIEW_PLACEHOLDER' | translate"
-                            [class.is-invalid]="review?.invalid && review?.touched"
-                        ></textarea>
+                            [class.is-invalid]="review?.invalid && review?.touched"></textarea>
                         <small class="field-error" *ngIf="review?.invalid && review?.touched">
-                            <span *ngIf="review?.errors?.['required']">{{ 'ADD_REVIEW_REVIEW_REQUIRED' | translate }}</span>
-                            <span *ngIf="review?.errors?.['minlength']">{{ 'ADD_REVIEW_REVIEW_MIN_LENGTH' | translate }}</span>
+                            <span *ngIf="review?.errors?.['required']">{{ 'ADD_REVIEW_REVIEW_REQUIRED' | translate
+                                }}</span>
+                            <span *ngIf="review?.errors?.['minlength']">{{ 'ADD_REVIEW_REVIEW_MIN_LENGTH' | translate
+                                }}</span>
                         </small>
                     </div>
 
@@ -75,7 +68,8 @@
         <section class="reviews-list" *ngIf="!isLoading">
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-4" *ngFor="let review of reviews; let i = index">
-                    <article class="review-card animate__animated animate__fadeInUp" [style.animation-delay]="i * 0.1 + 's'">
+                    <article class="review-card animate__animated animate__fadeInUp"
+                        [style.animation-delay]="i * 0.1 + 's'">
                         <p class="review-text">{{ review.review }}</p>
 
                         <div class="reviewer-info">
