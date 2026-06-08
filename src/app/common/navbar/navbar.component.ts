@@ -96,15 +96,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
         private translate: TranslateService,
         private ngZone: NgZone
     ) {
-        this.translate.addLangs(['en', 'ar']);
+        this.translate.addLangs(['en']);
         this.translate.setDefaultLang('en');
-        const savedLang = localStorage.getItem('language');
-        const browserLang = this.translate.getBrowserLang();
-        const initialLang = savedLang || (browserLang?.match(/en|ar/) ? browserLang : 'en');
-
-        this.translate.use(initialLang);
-        this.currentLanguage = initialLang;
-        this.applyLanguageDirection(initialLang);
+        this.translate.use('en');
+        this.currentLanguage = 'en';
+        this.applyLanguageDirection('en');
     }
 
     ngOnInit(): void {
