@@ -433,13 +433,14 @@ $gray: #9ca3af;
 
     .navbar-container {
         padding: 0 20px;
-        justify-content: center;
+        justify-content: space-between;
         gap: 12px;
         min-height: 70px;
     }
 
     .navbar-brand {
-        margin-inline: auto;
+        margin-inline: 0;
+        flex-shrink: 0;
     }
 
     .navbar-menu {
@@ -553,9 +554,9 @@ $gray: #9ca3af;
 
     .navbar-mobile-controls {
         display: flex;
-        position: absolute;
-        inset-inline-end: 20px;
+        position: static;
         margin-left: 0;
+        flex-shrink: 0;
     }
 
     .mobile-contact-btn {
@@ -593,7 +594,6 @@ $gray: #9ca3af;
 
     .navbar-mobile-controls {
         gap: 10px;
-        inset-inline-end: 15px;
         margin-left: 0;
     }
 
