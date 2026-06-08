@@ -49,6 +49,14 @@
         </div>
 
         <div class="navbar-mobile-controls">
+            <a
+                routerLink="/contacts"
+                routerLinkActive="active"
+                class="nav-action primary mobile-contact-btn"
+                (click)="closeMobileMenu()"
+            >
+                {{ 'BOOK_TRIAL' | translate }}
+            </a>
             <button
             type="button"
             class="mobile-toggle"

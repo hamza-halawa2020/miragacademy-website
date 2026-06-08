@@ -419,6 +419,12 @@ $gray: #9ca3af;
     font-size: 13px;
     white-space: nowrap;
     box-shadow: 0 8px 20px rgba(74, 50, 24, 0.08);
+
+    @media (max-width: 1199px) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media (max-width: 1199px) {
     .main-navbar {
