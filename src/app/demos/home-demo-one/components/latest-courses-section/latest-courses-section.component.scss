@@ -44,12 +44,16 @@
 }
 
 .category-description {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 72px;
+    margin-bottom: 12px;
 }
+
+// .category-description {
+//     display: -webkit-box;
+//     -webkit-line-clamp: 3;
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//     min-height: 72px;
+// }
 
 .category-image-wrap {
     width: 100%;
