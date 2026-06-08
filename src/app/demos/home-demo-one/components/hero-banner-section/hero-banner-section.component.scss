@@ -208,6 +208,25 @@
     }
 }
 
+.hero-mobile-logo {
+    display: none;
+    justify-content: center;
+    margin: 14px 0 18px;
+
+    img {
+        width: min(55vw, 180px);
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 8px 18px rgba(74, 50, 24, 0.12));
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-mobile-logo {
+        display: flex;
+    }
+}
+
 @media (max-width: 991px) {
     .hero-banner {
         padding-top: 82px;
