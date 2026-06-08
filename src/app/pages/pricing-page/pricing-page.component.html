@@ -49,7 +49,7 @@
                 <span class="badge" *ngIf="plan.badge || plan.is_featured">{{ plan.badge || 'Popular' }}</span>
                 <div class="plan-top">
                     <h3>{{ plan.title }}</h3>
-                    <p>{{ plan.subtitle || 'A flexible monthly learning plan' }}</p>
+                    <!-- <p>{{ plan.subtitle || 'A flexible monthly learning plan' }}</p> -->
                 </div>
                 <div class="price-row">
                     <span class="currency">{{ plan.currency || 'USD' }}</span>
@@ -57,23 +57,32 @@
                     <span class="period">/ month</span>
                 </div>
                 <div class="plan-stats" aria-label="Plan details">
-                    <div class="stat-item">
-                        <span class="stat-value">{{ plan.classes_count }}</span>
-                        <span class="stat-label">Classes / month</span>
-                    </div>
+
                     <div class="stat-item">
                         <span class="stat-value">{{ plan.days_per_week }}</span>
-                        <span class="stat-label">Days / week</span>
+                        <span class="stat-label">class per week</span>
                     </div>
+
                     <div class="stat-item">
                         <span class="stat-value">{{ plan.minutes_per_class }}</span>
-                        <span class="stat-label">Minutes / class</span>
+                        <span class="stat-label">mins class</span>
                     </div>
+
                     <div class="stat-item">
+                        <span class="stat-value">{{ plan.classes_count }}</span>
+                        <span class="stat-label">hours per month</span>
+                    </div>
+
+
+                    <div class="stat-item">
+                        <span class="stat-value">{{ plan.price }}</span>
+                        <span class="stat-label">{{ plan.currency }} monthly</span>
+                    </div>
+                    <!-- <div class="stat-item">
                         <span class="stat-value">{{ plan.price_per_class ? formatMoney(plan.price_per_class,
                             plan.currency) : '-' }}</span>
                         <span class="stat-label">Price / class</span>
-                    </div>
+                    </div> -->
                 </div>
                 <ul>
                     <li *ngFor="let feature of planFeatures(plan)">
@@ -81,7 +90,8 @@
                         <span>{{ feature }}</span>
                     </li>
                 </ul>
-                <a routerLink="/contacts" [queryParams]="{ pricing_plan_id: plan.id, plan: plan.title }" class="choose-btn">Choose Plan</a>
+                <a routerLink="/contacts" [queryParams]="{ pricing_plan_id: plan.id, plan: plan.title }"
+                    class="choose-btn">Choose Plan</a>
             </article>
         </div>
     </div>
