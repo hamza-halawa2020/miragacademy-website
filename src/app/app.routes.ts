@@ -52,7 +52,7 @@ export const routes: Routes = [
         data: {
             seo: {
                 title: 'Contact Us - Mirag Academy',
-                description: 'Contact Mirag Academy to book a demo class, ask about Quran courses, or get help choosing the right online learning plan.',
+                description: 'Contact Mirag Academy to Book a free trial, ask about Quran courses, or get help choosing the right online learning plan.',
                 canonicalPath: '/contacts'
             }
         }
