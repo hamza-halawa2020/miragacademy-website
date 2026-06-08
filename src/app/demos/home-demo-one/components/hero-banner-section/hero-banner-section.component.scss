@@ -225,6 +225,10 @@
     .hero-mobile-logo {
         display: flex;
     }
+
+    .hero-visual {
+        display: none;
+    }
 }
 
 @media (max-width: 991px) {
