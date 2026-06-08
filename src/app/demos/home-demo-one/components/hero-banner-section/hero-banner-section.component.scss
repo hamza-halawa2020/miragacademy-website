@@ -56,6 +56,65 @@
     box-shadow: 0 10px 28px rgba(74, 50, 24, 0.06);
 }
 
+.hero-platforms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(184, 137, 61, 0.15);
+
+    .platforms-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #9a7a52;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+    }
+
+    .platforms-list {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .platform-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(184, 137, 61, 0.2);
+        box-shadow: 0 2px 8px rgba(74, 50, 24, 0.06);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #4a3218;
+        transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 50, 24, 0.1);
+            border-color: rgba(184, 137, 61, 0.4);
+        }
+    }
+
+    @media (max-width: 1199px) {
+        justify-content: center;
+
+        .platforms-list {
+            justify-content: center;
+        }
+    }
+}
+
 .hero-copy h1 {
     margin: 0 0 18px;
     max-width: 760px;

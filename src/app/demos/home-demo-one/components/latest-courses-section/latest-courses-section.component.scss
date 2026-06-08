@@ -76,6 +76,20 @@
     font-weight: 700;
 }
 
+.all-btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #e7c879 0%, #b8893d 55%, #7b5527 100%);
+    color: #4a3218;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
 @media (max-width: 1199px) {
     .categories-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -92,4 +106,3 @@
         gap: 14px;
     }
 }
-

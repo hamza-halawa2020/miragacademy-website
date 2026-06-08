@@ -7,24 +7,24 @@
         <div class="categories-grid">
             <article class="category-card" *ngFor="let category of categories">
                 <div class="category-image-wrap">
-                    <img
-                        [src]="category.image_url || 'assets/images/logo.webp'"
-                        [alt]="category.name"
-                        loading="lazy"
-                    />
+                    <img [src]="category.image_url || 'assets/images/logo.webp'" [alt]="category.name" loading="lazy" />
                 </div>
                 <h3>{{ category.name }}</h3>
                 <p class="category-description" *ngIf="category.description">{{ category.description }}</p>
                 <p *ngIf="category.courses_count !== undefined">
                     {{ category.courses_count }} {{ 'COURSES' | translate }}
                 </p>
-                <a
-                    [routerLink]="'/courses'"
-                    [queryParams]="{ category: category.id }"
-                    class="category-link">
+                <a [routerLink]="'/courses'" [queryParams]="{ category: category.id }" class="category-link">
                     {{ 'VIEW_ALL_COURSES' | translate }}
                 </a>
             </article>
         </div>
     </div>
+    <div class="section-header text-center mt-3">
+        <a [routerLink]="'/courses'" class="all-btn-link">
+            {{ 'VIEW_ALL_COURSES' | translate }}
+        </a>
+    </div>
+
+
 </section>

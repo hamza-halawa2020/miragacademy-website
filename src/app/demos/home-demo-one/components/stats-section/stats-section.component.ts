@@ -23,11 +23,13 @@ export class StatsSectionComponent implements AfterViewInit {
     hasAnimated = false;
 
     defaultStats = {
-        completedStudies: 1500,  // Students graduated
-        satisfiedClients: 3200,  // Active students
-        yearsExperience: 15,     // Years of teaching excellence
-        successPartners: 45      // qualified teachers
+        completedStudies: 50,  // Students graduated
+        satisfiedClients: 500,  // Active students
+        yearsExperience: 20000,     // Years of teaching excellence
+        successPartners: 90      // qualified teachers
     };
+
+
 
     ngAfterViewInit(): void {
         setTimeout(() => {
@@ -79,10 +81,10 @@ export class StatsSectionComponent implements AfterViewInit {
             }, 3000);
         }
 
-        this.animateCounter('completedStudies', currentStats.completedStudies, 2000);
-        this.animateCounter('satisfiedClients', currentStats.satisfiedClients, 2500);
-        this.animateCounter('yearsExperience', currentStats.yearsExperience, 1500);
-        this.animateCounter('successPartners', currentStats.successPartners, 2200);
+        this.animateCounter('completedStudies', currentStats.completedStudies, 50);
+        this.animateCounter('satisfiedClients', currentStats.satisfiedClients, 500);
+        this.animateCounter('yearsExperience', currentStats.yearsExperience, 20000);
+        this.animateCounter('successPartners', currentStats.successPartners, 90);
     }
 
     testCounter(): void {

@@ -144,10 +144,10 @@ export class HomeService {
 
   getStats(): Observable<HomeStats> {
     return of({
-      completedStudies: 250,
-      satisfiedClients: 800,
-      yearsExperience: 20,
-      successPartners: 75
+      completedStudies: 50,
+      satisfiedClients: 500,
+      yearsExperience: 20000,
+      successPartners: 90
     });
   }
 

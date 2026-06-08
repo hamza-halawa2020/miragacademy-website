@@ -88,7 +88,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         },
         {
             icon: 'fa-solid fa-hand-holding-heart',
-            title: 'Supportive Care',
+            title: 'Support 24/7',
             description: 'Our team helps you choose the suitable teacher, plan, and schedule before enrollment.'
         },
         {

@@ -3,14 +3,26 @@
 
     <app-hero-banner-section></app-hero-banner-section>
 
-    <div #homeDataTrigger class="home-data-trigger" aria-hidden="true"></div>
+    <!-- <div #homeDataTrigger class="home-data-trigger" aria-hidden="true"></div> -->
+
+    @defer (on viewport) {
+    <section class="home-block home-block-surface" scrollReveal>
+        <div class="container">
+            <app-services-section [categories]="homeData?.courseCategories || []"></app-services-section>
+        </div>
+    </section>
+    } @placeholder {
+    <div class="home-defer-placeholder" style="--home-defer-min-h: 420px"></div>
+    }
+
 
     <section class="home-block home-block-surface home-why" scrollReveal>
         <div class="container">
             <div class="home-section-heading">
                 <span>Why Us?</span>
                 <h2>We Provide a Different Learning Journey</h2>
-                <p>Everything is designed to make online Quran learning personal, clear, spiritual, and easy to continue.</p>
+                <p>Everything is designed to make online Quran learning personal, clear, spiritual, and easy to
+                    continue.</p>
             </div>
             <div class="why-grid">
                 @for (item of whyUsItems; track item.title) {
@@ -24,17 +36,39 @@
                 }
             </div>
         </div>
-    </section>
 
-    @defer (on viewport) {
-    <section class="home-block home-block-surface" scrollReveal>
-        <div class="container">
-            <app-services-section [categories]="homeData?.courseCategories || []"></app-services-section>
+
+        <div class="platforms-strip">
+            <span class="platforms-strip-label">We are delivering our online classes through </span>
+            <div class="platforms-strip-list">
+                <span class="platform-chip">
+                    <svg width="20" height="20" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="12" fill="#2D8CFF"/><path d="M10 22a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V22z" fill="white"/><path d="M42 28l10-6v20l-10-6V28z" fill="white"/></svg>
+                    Zoom
+                </span>
+                <span class="platform-chip">
+                    <svg width="20" height="20" viewBox="0 0 64 64"><path d="M40 32c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8 8 3.58 8 8z" fill="#00832D"/><path d="M40 32v8l12 8V16L40 24v8z" fill="#0066DA"/><path d="M12 40V24l14-8H12a4 4 0 0 0-4 4v24a4 4 0 0 0 4 4h14l-14-8z" fill="#E94235"/><path d="M26 16l14 8-14 8V16z" fill="#2DA44E"/><path d="M26 48l14-8-14-8v16z" fill="#00AC47"/></svg>
+                    Google Meet
+                </span>
+                <span class="platform-chip">
+                    <svg width="20" height="20" viewBox="0 0 64 64"><rect width="64" height="64" rx="32" fill="#00AFF0"/><path d="M32 40c-4 0-6.5-1.9-6.5-4.5 0-1.4 1-2.3 2.4-2.3 3.1 0 2.3 4.4 6 4.4 1.9 0 2.9-.9 2.9-2.1 0-3.3-11.6-1.5-11.6-8.4 0-3.4 2.9-5.8 7.5-5.8 3.7 0 6.3 1.8 6.3 4.2 0 1.4-1.1 2.2-2.5 2.2-2.8 0-2.2-3.7-4.9-3.7-1.6 0-2.6.8-2.6 2 0 3.1 11.6 1.5 11.6 8.3C40.6 37.7 37.5 40 32 40z" fill="white"/></svg>
+                    Skype
+                </span>
+            </div>
         </div>
+
+        
+        <div class="container money-back-guarantee">
+            <div class="guarantee-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span class="guarantee-percent">100%</span>
+            </div>
+            <div class="guarantee-text">
+                <strong>Money Back Guarantee</strong>
+                <p>Our payments are securely processed by PayPal &amp; Stripe. We will refund your money if you aren't satisfied!</p>
+            </div>
+        </div>
+
     </section>
-    } @placeholder {
-    <div class="home-defer-placeholder" style="--home-defer-min-h: 420px"></div>
-    }
 
     <section class="home-block home-block-soft home-expertise" scrollReveal [revealDelay]="60">
         <div class="container">
@@ -42,8 +76,9 @@
                 <div class="expertise-copy">
                     <span>Our Expertise</span>
                     <h2>Unlock the Best Way to Learn Quran Online & Arabic</h2>
-                    <p>Mirag Academy combines qualified teachers, personalized scheduling, and a calm online experience so learners can build confidence step by step.</p>
-                    <a routerLink="/courses" class="expertise-link">Explore Programs</a>
+                    <p>Mirag Academy combines qualified teachers, personalized scheduling, and a calm online experience
+                        so learners can build confidence step by step.</p>
+                    <a routerLink="/courses" class="expertise-link">Explore Courses</a>
                 </div>
                 <div class="expertise-list">
                     @for (item of expertiseItems; track item) {
@@ -141,7 +176,9 @@
     <section class="home-block home-block-seo">
         <div class="container seo-content">
             <h2>Learn Quran, Tajweed and Arabic Online</h2>
-            <p>miragacademy Academy provides live learning programs with qualified teachers to help kids and adults memorize Quran correctly, master Tajweed rules, and build Arabic and Islamic studies foundations at every level.</p>
+            <p>miragacademy Academy provides live learning programs with qualified teachers to help kids and adults
+                memorize Quran correctly, master Tajweed rules, and build Arabic and Islamic studies foundations at
+                every level.</p>
             <h3>Frequently Asked Questions</h3>
             <div class="seo-faq-list">
                 @for (item of seoFaqItems; track item.question) {
