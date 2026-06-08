@@ -26,7 +26,7 @@ export class StatsSectionComponent implements AfterViewInit {
         completedStudies: 1500,  // Students graduated
         satisfiedClients: 3200,  // Active students
         yearsExperience: 15,     // Years of teaching excellence
-        successPartners: 45      // caring teachers
+        successPartners: 45      // qualified teachers
     };
 
     ngAfterViewInit(): void {

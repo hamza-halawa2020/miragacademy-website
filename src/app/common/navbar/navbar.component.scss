@@ -602,6 +602,18 @@ $gray: #9ca3af;
         font-size: 12px;
     }
 }
+
+@media (max-width: 400px) {
+    .navbar-brand .brand-logo {
+        height: 30px;
+        max-width: min(28vw, 110px);
+    }
+
+    .mobile-contact-btn {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+}
 :host-context([dir="rtl"]) {
     .navbar-mobile-controls {
         margin-right: 0;
