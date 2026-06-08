@@ -69,7 +69,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         {
             icon: 'fa-solid fa-user',
             title: 'Expert Native Arabic Scholars',
-            description: 'Learn with qualified teachers who explain Quran, Tajweed, Arabic, and Islamic studies clearly.'
+            description: 'Learn with caring teachers who explain Quran, Tajweed, Arabic, and Islamic studies clearly.'
         },
         {
             icon: 'fa-solid fa-check',
@@ -110,7 +110,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         completedStudies: 1500,  // Students graduated
         satisfiedClients: 3200,  // Active students
         yearsExperience: 15,     // Years of teaching excellence
-        successPartners: 45      // Qualified teachers
+        successPartners: 45      // caring teachers
     };
 
     constructor(
@@ -347,12 +347,12 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
 
         const title = 'Mirag Academy - Online Quran Memorization, Tajweed and Arabic Lessons';
 
-        const description = 'Learn Quran online with qualified teachers in memorization, Tajweed, Arabic language, and Islamic studies for all ages.';
+        const description = 'Learn Quran online with caring teachers in memorization, Tajweed, Arabic language, and Islamic studies for all ages.';
 
         this.seoFaqItems = [
                 {
                     question: 'What services does mirag Academy provide?',
-                    answer: 'We provide online Quran memorization, Tajweed classes, Arabic language courses, and Islamic studies with qualified teachers.'
+                    answer: 'We provide online Quran memorization, Tajweed classes, Arabic language courses, and Islamic studies with caring teachers.'
                 },
                 {
                     question: 'Are online classes suitable for kids and adults?',

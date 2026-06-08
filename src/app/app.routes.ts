@@ -8,7 +8,7 @@ export const routes: Routes = [
         data: {
             seo: {
                 title: 'Mirag Academy - Online Quran, Tajweed and Arabic Lessons',
-                description: 'Learn Quran online with qualified teachers in memorization, Tajweed, Arabic language, and Islamic studies for kids and adults.',
+                description: 'Learn Quran online with caring teachers in memorization, Tajweed, Arabic language, and Islamic studies for kids and adults.',
                 canonicalPath: '/'
             }
         }
@@ -19,7 +19,7 @@ export const routes: Routes = [
         data: {
             seo: {
                 title: 'About Us - Mirag Academy',
-                description: 'Learn more about Mirag Academy, our qualified Quran teachers, online learning approach, and mission to teach Quran, Tajweed, Arabic, and Islamic studies.',
+                description: 'Learn more about Mirag Academy, our caring Quran teachers, online learning approach, and mission to teach Quran, Tajweed, Arabic, and Islamic studies.',
                 canonicalPath: '/about'
             }
         }
@@ -52,7 +52,7 @@ export const routes: Routes = [
         data: {
             seo: {
                 title: 'Contact Us - Mirag Academy',
-                description: 'Contact Mirag Academy to book a trial class, ask about Quran courses, or get help choosing the right online learning plan.',
+                description: 'Contact Mirag Academy to book a demo class, ask about Quran courses, or get help choosing the right online learning plan.',
                 canonicalPath: '/contacts'
             }
         }
@@ -115,7 +115,7 @@ export const routes: Routes = [
         data: {
             seo: {
                 title: 'Teachers - Mirag Academy',
-                description: 'Meet qualified Mirag Academy teachers for online Quran memorization, Tajweed, Arabic, and Islamic studies classes.',
+                description: 'Meet caring Mirag Academy teachers for online Quran memorization, Tajweed, Arabic, and Islamic studies classes.',
                 canonicalPath: '/teachers'
             }
         }

@@ -1,7 +1,7 @@
 ﻿.whatsapp-float {
     position: fixed;
-    bottom: 25px; // above back-to-top
-    left: 30px; // always on the left
+    bottom: 100px; // above back-to-top
+    right: 30px; // same side as back-to-top
     width: 60px;
     height: 60px;
     background: #25d366;
@@ -99,8 +99,9 @@
 @media (max-width: 768px) {
     .whatsapp-float {
         
-        bottom: calc(20px + env(safe-area-inset-bottom));
-        left: 20px;
+        bottom: calc(80px + env(safe-area-inset-bottom));
+        right: 20px;
+        left: auto;
         width: 45px;
         height: 45px;
         animation: none !important;
@@ -117,8 +118,9 @@
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        bottom: calc(20px + env(safe-area-inset-bottom));
-        left: 15px;
+        bottom: calc(80px + env(safe-area-inset-bottom));
+        right: 15px;
+        left: auto;
         width: 45px;
         height: 45px;
         animation: none !important;
