@@ -73,7 +73,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         },
         {
             icon: 'fa-solid fa-check',
-            title: 'One-to-One Learning',
+            title: 'One One Classes',
             description: 'Private classes built around the learner’s age, level, pace, and personal learning goal.'
         },
         {

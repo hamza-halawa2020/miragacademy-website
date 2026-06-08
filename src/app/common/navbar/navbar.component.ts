@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
             route: '/testimonials'
         },
         {
-            label: 'About',
+            label: 'About Us',
             route: '/about'
         },
         // {
