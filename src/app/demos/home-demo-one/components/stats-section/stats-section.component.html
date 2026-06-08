@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-number">{{ animatedStats.yearsExperience }}+</div>
+                        <div class="stat-number">{{ animatedStats.yearsExperience >= 1000 ? (animatedStats.yearsExperience / 1000 | number:'1.0-0') + 'k' : animatedStats.yearsExperience }}</div>
                         <div class="stat-label">{{ 'YEARS_EXPERIENCE' | translate }}</div>
                     </div>
                     <div class="card-decoration"></div>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-number">{{ animatedStats.successPartners }}+</div>
+                        <div class="stat-number">{{ animatedStats.successPartners }}%</div>
                         <div class="stat-label">{{ 'SUCCESS_PARTNERS_COUNT' | translate }}</div>
                     </div>
                     <div class="card-decoration"></div>

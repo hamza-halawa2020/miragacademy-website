@@ -68,7 +68,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
     whyUsItems = [
         {
             icon: 'fa-solid fa-user',
-            title: 'Expert Native Arabic Scholars',
+            title: 'Expert Native Arabic Tutors',
             description: 'Learn with qualified teachers who explain Quran, Tajweed, Arabic, and Islamic studies clearly.'
         },
         {
@@ -79,7 +79,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         {
             icon: 'fa-solid fa-chalkboard-user',
             title: 'Certified Tutors',
-            description: 'Structured lessons with qualified instructors and continuous progress follow-up.'
+            description: 'We have expert Male and Female teachers who are fluent in English and they are Arabic native speakers , graduated from Al-Azhar university in Cairo,and Al Madina university in Saudi Arabia Kingdom and have Ijazaah in Quran.'
         },
         {
             icon: 'fa-solid fa-video',
@@ -89,7 +89,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         {
             icon: 'fa-solid fa-hand-holding-heart',
             title: 'Supportive Care',
-            description: 'Our team helps you choose the right teacher, plan, and schedule before enrollment.'
+            description: 'Our team helps you choose the suitable teacher, plan, and schedule before enrollment.'
         },
         {
             icon: 'fa-solid fa-star-and-crescent',
@@ -107,10 +107,10 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
     ];
 
     defaultStats = {
-        completedStudies: 1500,  // Students graduated
-        satisfiedClients: 3200,  // Active students
-        yearsExperience: 15,     // Years of teaching excellence
-        successPartners: 45      // qualified teachers
+        completedStudies: 50,  // Students graduated
+        satisfiedClients: 500,  // Active students
+        yearsExperience: 20000,     // Years of teaching excellence
+        successPartners: 90      // qualified teachers
     };
 
     constructor(
