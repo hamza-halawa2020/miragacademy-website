@@ -20,6 +20,7 @@ import { LearningBenefitsSectionComponent } from './components/learning-benefits
 import { TeachersSectionComponent } from './components/teachers-section/teachers-section.component';
 import { SeoService } from '../../shared/services/seo.service';
 import { SettingService } from '../../shared/services/setting.service';
+import { FaqSectionComponent } from '../../common/faq-section/faq-section.component';
 
 type IdleWindow = Window & {
     requestIdleCallback?: (callback: (_deadline: unknown) => void, options?: { timeout: number }) => number;
@@ -47,6 +48,7 @@ type IdleWindow = Window & {
         ScrollRevealDirective,
         LearningBenefitsSectionComponent,
         TeachersSectionComponent,
+        FaqSectionComponent,
     ],
     templateUrl: './home-demo-one.component.html',
     styleUrl: './home-demo-one.component.scss',

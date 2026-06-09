@@ -1,6 +1,6 @@
 <app-page-hero eyebrow="Mirag Academy" [title]="'ABOUT_US' | translate" [description]="'WHY_CHOOSE_PENN' | translate">
     <div class="hero-actions">
-        <div class="mb-3">Mirag is a leading online islamic academy offering courses such as Quran,Tajweed,Ijaazah program,Islamic studies and Arabic classes .</div>
+        <div class="mb-3">Mirag is a leading online Islamic academy offering courses in Quran, Tajweed, Ijazah Programs, Islamic Studies, and Arabic Language.</div>
         <a routerLink="/contacts" class="btn btn-primary">Book a free trial</a>
     </div>
 </app-page-hero>
@@ -10,6 +10,10 @@
         <div class="about-intro" *ngIf="settings.about_us">
             <p>{{ settings.about_us }}</p>
         </div>
+
+
+        <app-faq-section></app-faq-section>
+
 
         <section class="features-section">
             <app-section-heading eyebrow="Why Us" title="Why Families Choose Us"

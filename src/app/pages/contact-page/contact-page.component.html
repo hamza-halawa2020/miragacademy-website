@@ -30,7 +30,11 @@
                     </div>
                     <h3>Whatsapp</h3>
                     <!-- <p *ngIf="settings.phone"><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></p> -->
-                    <p *ngIf="settings.whatsapp"><a href="tel:{{ settings.whatsapp }}">{{ settings.whatsapp }}</a></p>
+                    <p *ngIf="settings.whatsapp">
+                        <a [href]="'https://wa.me/' + settings.whatsapp.replace('+', '').replace(' ', '')" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> {{ settings.whatsapp }}
+                        </a>
+                    </p>
                 </div>
 
                 <div class="info-card">

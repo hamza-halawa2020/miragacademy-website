@@ -7,6 +7,7 @@ import { NgIf } from '@angular/common';
 import { PageHeroComponent } from '../../shared/components/page-hero/page-hero.component';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
 import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.component';
+import { FaqSectionComponent } from '../../common/faq-section/faq-section.component';
 
 @Component({
     selector: 'app-about-page',
@@ -17,7 +18,8 @@ import { HelpCtaComponent } from '../../shared/components/help-cta/help-cta.comp
         NgIf,
         PageHeroComponent,
         SectionHeadingComponent,
-        HelpCtaComponent
+        HelpCtaComponent,
+        FaqSectionComponent
     ],
     templateUrl: './about-page.component.html',
     styleUrls: ['./about-page.component.scss'],

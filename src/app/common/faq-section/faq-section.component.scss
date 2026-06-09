@@ -1,0 +1,89 @@
+.faq-section {
+    h2 {
+        font-size: clamp(1.4rem, 2.8vw, 2rem);
+        color: var(--primaryColor, #4a3218);
+        margin: 0 0 10px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        color: var(--primaryColor, #4a3218);
+        margin: 24px 0 14px;
+    }
+
+    > .container > p {
+        color: var(--paragraphColor, #6f5a41);
+        line-height: 1.7;
+        margin: 0 0 20px;
+    }
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+}
+
+.faq-item {
+    border: 1px solid rgba(184, 137, 61, 0.14);
+    border-radius: 12px;
+    padding: 16px 20px;
+
+    h4 {
+        margin: 0 0 8px;
+        color: var(--primaryColor, #4a3218);
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 0;
+        color: var(--paragraphColor, #6f5a41);
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+
+.faq-benefits-list {
+    margin: 8px 0 12px;
+    padding-left: 20px;
+    color: var(--paragraphColor, #6f5a41);
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    li {
+        margin-bottom: 5px;
+
+        &::marker {
+            color: #b8893d;
+            font-weight: 700;
+        }
+    }
+}
+
+.faq-promise {
+    font-style: italic;
+    font-weight: 600;
+    color: #7b5527;
+    font-size: 0.9rem;
+}
+
+.faq-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: #25d366;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background: #1db954;
+        transform: translateY(-2px);
+        color: #fff;
+    }
+}
