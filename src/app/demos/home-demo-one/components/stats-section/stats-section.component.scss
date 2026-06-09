@@ -167,6 +167,15 @@
                 filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
                 transition: all 0.4s ease;
             }
+
+            .devices-icon {
+                display: inline-flex;
+                align-items: flex-end;
+                gap: 4px;
+
+                .fa-laptop { font-size: 2.8rem; }
+                .fa-mobile-screen { font-size: 1.8rem; margin-bottom: 2px; }
+            }
         }
         
         .stat-content {
