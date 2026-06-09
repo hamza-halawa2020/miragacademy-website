@@ -12,7 +12,7 @@
                     <!-- <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank" class="social-link" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a> -->
-                    <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank" class="social-link" aria-label="Instagram">
+                    <!-- <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank" class="social-link" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank" class="social-link" aria-label="Twitter">
@@ -20,7 +20,7 @@
                     </a>
                     <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
 
@@ -31,7 +31,11 @@
                     <!-- <li *ngIf="!settings.address">{{ "NEW_CAIRO" | translate }}</li> -->
                     <li *ngIf="settings.email"><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></li>
                     <!-- <li *ngIf="settings.phone"><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li> -->
-                    <li *ngIf="settings.whatsapp"><a href="tel:{{ settings.whatsapp }}">{{ settings.whatsapp }}</a></li>
+                    <li *ngIf="settings.whatsapp">
+                        <a [href]="'https://wa.me/' + settings.whatsapp.replace('+', '').replace(' ', '')" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> {{ settings.whatsapp }}
+                        </a>
+                    </li>
                 </ul>
             </div>
 
