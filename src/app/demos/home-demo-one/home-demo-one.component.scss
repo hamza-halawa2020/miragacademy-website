@@ -695,3 +695,29 @@
         color: #ffffff;
     }
 }
+
+.seo-faq-list-items {
+    margin: 10px 0 14px;
+    padding-left: 20px;
+    color: var(--paragraphColor, #6f5a41);
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    li {
+        margin-bottom: 6px;
+        padding-left: 4px;
+
+        &::marker {
+            color: #b8893d;
+            font-weight: 700;
+        }
+    }
+}
+
+.seo-faq-promise {
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+    color: #7b5527;
+    font-size: 0.9rem;
+}
