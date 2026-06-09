@@ -19,6 +19,7 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
 import { LearningBenefitsSectionComponent } from './components/learning-benefits-section/learning-benefits-section.component';
 import { TeachersSectionComponent } from './components/teachers-section/teachers-section.component';
 import { SeoService } from '../../shared/services/seo.service';
+import { SettingService } from '../../shared/services/setting.service';
 
 type IdleWindow = Window & {
     requestIdleCallback?: (callback: (_deadline: unknown) => void, options?: { timeout: number }) => number;
@@ -113,14 +114,25 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
         successPartners: 90      // qualified teachers
     };
 
+    whatsappNumber: string = '201034100565';
+
     constructor(
         public translate: TranslateService,
         private homeService: HomeService,
         private ngZone: NgZone,
-        private seoService: SeoService
+        private seoService: SeoService,
+        private settingService: SettingService
     ) { }
 
     ngOnInit(): void {
+        this.settingService.getSettings().subscribe({
+            next: (settings) => {
+                const raw = settings.whatsapp || settings.phone || '201034100565';
+                this.whatsappNumber = raw.replace('+', '').replace(/\s/g, '');
+                this.applySeoContent();
+            },
+            error: () => this.applySeoContent()
+        });
         this.applySeoContent();
         this.languageSubscription = this.translate.onLangChange.subscribe(() => this.applySeoContent());
 
@@ -360,7 +372,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
                 },
                 {
                     question: 'How can I register for classes?',
-                    answer: 'You can register through the contact page, and our team will follow up to assess your level and schedule your program. Or just press the WhatsApp button 💬 and our support team is online 24/7 for you — they will help you immediately in shaa Allah. Leave your message now: https://wa.me/201034100565'
+                    answer: `You can register through the contact page, and our team will follow up to assess your level and schedule your program. Or just press the WhatsApp button 💬 and our support team is online 24/7 for you — they will help you immediately in shaa Allah. Leave your message now: https://wa.me/${this.whatsappNumber}`
                 }
             ];
 
