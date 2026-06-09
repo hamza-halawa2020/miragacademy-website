@@ -360,7 +360,7 @@ export class HomeDemoOneComponent implements OnInit, AfterViewInit, OnDestroy {
                 },
                 {
                     question: 'How can I register for classes?',
-                    answer: 'You can register through the contact page, and our team will follow up to assess your level and schedule your program.'
+                    answer: 'You can register through the contact page, and our team will follow up to assess your level and schedule your program. Or just press the WhatsApp button 💬 and our support team is online 24/7 for you — they will help you immediately in shaa Allah. Leave your message now: https://wa.me/201034100565'
                 }
             ];
 
