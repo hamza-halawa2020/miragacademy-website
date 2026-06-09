@@ -48,6 +48,12 @@ export class PricingPageComponent implements OnInit {
         return `${currencyLabel} ${this.formatAmount(value)}`;
     }
 
+    calcMonthlyHours(daysPerWeek: number, minutesPerClass: number): string {
+        const totalMinutes = daysPerWeek * minutesPerClass * 4;
+        const hours = totalMinutes / 60;
+        return this.formatAmount(hours);
+    }
+
     planFeatures(plan: PricingPlan): string[] {
         const apiFeatures = Array.isArray(plan.features) ? plan.features.filter(Boolean) : [];
 
