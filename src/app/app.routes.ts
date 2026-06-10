@@ -91,7 +91,7 @@ export const routes: Routes = [
         }
     },
     {
-        path: 'posts/:id',
+        path: 'posts/:slug',
         loadComponent: () => import('./pages/posts-page/post-details/post-details.component').then(m => m.PostDetailsComponent)
     },
     {

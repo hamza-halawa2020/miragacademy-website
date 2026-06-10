@@ -1,16 +1,16 @@
 <article class="content-card animate__animated animate__fadeInUp" [style.animation-delay]="animationDelay + 's'">
-    <a class="card-image" [routerLink]="[routePath, item.id]" [attr.aria-label]="item?.title">
+    <a class="card-image" [routerLink]="[routePath, getSlug()]" [attr.aria-label]="item?.title">
         <img [src]="getImageUrl()" [alt]="item.title">
     </a>
 
     <div class="card-body">
         <h3 class="card-title">
-            <a [routerLink]="[routePath, item.id]">{{ item.title }}</a>
+            <a [routerLink]="[routePath, getSlug()]">{{ item.title }}</a>
         </h3>
 
         <div class="card-description" [innerHTML]="item.description"></div>
 
-        <a [routerLink]="[routePath, item.id]" class="card-action">
+        <a [routerLink]="[routePath, getSlug()]" class="card-action">
             {{ 'READ_MORE' | translate }}
             <i class="fa-solid fa-arrow-right"></i>
         </a>

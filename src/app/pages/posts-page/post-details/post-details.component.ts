@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PostsService } from '../posts.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { HelpCtaComponent } from '../../../shared/components/help-cta/help-cta.component';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
     selector: 'app-post-details',
@@ -18,24 +19,39 @@ export class PostDetailsComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private postsService: PostsService
+        private postsService: PostsService,
+        private seoService: SeoService
     ) { }
 
     ngOnInit(): void {
         this.route.paramMap.subscribe(params => {
-            const id = params.get('id');
-            if (id) {
-                this.fetchDetails(id);
+            const slug = params.get('slug');
+            if (slug) {
+                this.fetchDetails(slug);
             }
         });
     }
 
-    fetchDetails(id: string) {
+    fetchDetails(slug: string) {
         this.isLoading = true;
-        this.postsService.getPostDetails(id).subscribe({
+        this.postsService.getPostDetails(slug).subscribe({
             next: (response: any) => {
                 this.post = response.data;
                 this.isLoading = false;
+                
+                // Update SEO metadata with article schema
+                this.seoService.update({
+                    title: this.post.meta_title || this.post.title,
+                    description: this.post.meta_description || this.post.description,
+                    image: this.post.image_url,
+                    canonicalPath: `/posts/${this.post.slug}`,
+                    type: 'article',
+                    article: {
+                        author: this.post.author,
+                        publishedDate: this.post.created_at,
+                        updatedDate: this.post.updated_at
+                    }
+                });
             },
             error: (error: any) => {
                 this.isLoading = false;

@@ -15,6 +15,11 @@ type SeoConfig = {
     type?: string;
     canonicalPath?: string;
     faq?: FaqItem[];
+    article?: {
+        author?: string;
+        publishedDate?: string;
+        updatedDate?: string;
+    };
 };
 
 @Injectable({ providedIn: 'root' })
@@ -67,6 +72,10 @@ export class SeoService {
         this.updateCanonical(canonicalUrl);
         this.updateSiteSchema(siteUrl);
         this.updateFaqSchema(config.faq);
+        
+        if (config.type === 'article' && config.article) {
+            this.updateArticleSchema(config.title, config.description, image, canonicalUrl, config.article);
+        }
     }
 
     private updateCanonical(href: string): void {
@@ -137,6 +146,39 @@ export class SeoService {
                 }
             ]
         });
+    }
+
+    private updateArticleSchema(title: string, description: string, image: string, canonicalUrl: string, article: { author?: string; publishedDate?: string; updatedDate?: string; }): void {
+        const schema: any = {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: title,
+            description: description,
+            image: image,
+            url: canonicalUrl,
+            author: {
+                '@type': 'Organization',
+                name: this.siteName
+            },
+            publisher: {
+                '@type': 'Organization',
+                name: this.siteName,
+                logo: {
+                    '@type': 'ImageObject',
+                    url: `${this.getSiteUrl()}/assets/images/full_logo.webp`
+                }
+            }
+        };
+
+        if (article.publishedDate) {
+            schema.datePublished = article.publishedDate;
+        }
+
+        if (article.updatedDate) {
+            schema.dateModified = article.updatedDate;
+        }
+
+        this.updateJsonLd('seo-article-schema', schema);
     }
 
     private updateJsonLd(id: string, data: object): void {

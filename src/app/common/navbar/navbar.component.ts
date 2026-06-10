@@ -57,37 +57,24 @@ export class NavbarComponent implements OnInit, OnDestroy {
             route: '/testimonials'
         },
         {
+            label: 'BLog',
+            route: '/posts'
+        },
+        {
             label: 'About Us',
             route: '/about'
         },
-        // {
-        //     label: 'More',
-        //     children: [
-        //         {
-        //             label: 'Articles',
-        //             route: '/posts'
-        //         },
-        //         {
-        //             label: 'MEDIA_GALLERY.TITLE',
-        //             route: '/media'
-        //         },
-        //         {
-        //             label: 'Certificates',
-        //             route: '/certificates'
-        //         },
-        //     ],
-        // },
     ];
     languages = [
         {
             code: 'en',
             name: 'English',
-            flag: 'ðŸ‡ºðŸ‡¸'
+            flag: 'English'
         },
         {
-            code: 'ar',
-            name: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©',
-            flag: 'ðŸ‡¸ðŸ‡¦'
+            code: 'en',
+            name: 'English',
+            flag: 'English'
         }
     ];
 

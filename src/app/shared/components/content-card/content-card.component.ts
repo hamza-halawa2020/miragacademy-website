@@ -27,5 +27,9 @@ export class ContentCardComponent {
         
         return '';
     }
+
+    getSlug(): string | number {
+        return this.item?.slug || this.item?.id;
+    }
 }
 
