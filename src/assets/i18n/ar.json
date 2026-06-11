@@ -845,8 +845,8 @@
     "ISLAMIC_NOTE": "All our financial transactions are compliant with Islamic Sharia law and free from usury (Riba)"
   },
   "MEDIA_GALLERY": {
-    "TITLE": "Media Gallery",
-    "SUBTITLE": "Browse our collection of images, videos, and audio recordings",
+    "TITLE": "watch real class",
+    "SUBTITLE": "Browse our collection of images and videos",
     "ALL": "All",
     "IMAGES": "Images",
     "VIDEOS": "Videos",
@@ -880,7 +880,7 @@
   "SERVICE_ARTICLES_DESC": "Read the latest educational articles and tips from our experts.",
   "SERVICE_TESTIMONIALS_TITLE": "Student Testimonials",
   "SERVICE_TESTIMONIALS_DESC": "Discover our students' success stories and their learning experiences.",
-  "MEDIA_GALLERY_TITLE": "Media Gallery",
+  "MEDIA_GALLERY_TITLE": "Watch Real Classes",
   "MEDIA_GALLERY_DESC": "Explore our collection of educational images and videos",
   "ALL": "All",
   "IMAGES": "Images",
@@ -889,5 +889,9 @@
   "WHATSAPP_NUMBER": "WhatsApp Number",
   "BOOK_TRIAL": "Enroll Now",
   "EMAIL_DISCLAIMER": "By submitting this form, you agree to our Privacy Policy and Terms of Service.",
-  "NAV_TESTIMONIALS":"TESTIMONIALS"
+  "NAV_TESTIMONIALS":"TESTIMONIALS",
+  "SHARE_THIS_PAGE": "شارك هذه الصفحة",
+  "SHARE_COPY_LINK": "نسخ الرابط",
+  "SHARE_LINK_COPIED": "تم نسخ الرابط!",
+  "SHARE_ON": "شارك على"
 }

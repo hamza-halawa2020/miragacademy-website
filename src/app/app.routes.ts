@@ -136,7 +136,7 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/media-gallery-page/media-gallery-page.component').then(m => m.MediaGalleryPageComponent),
         data: {
             seo: {
-                title: 'Media Gallery - Mirag Academy',
+                title: 'Watch Real Classes - Mirag Academy',
                 description: 'View Mirag Academy media, learning moments, certificates, and online Quran education activities.',
                 canonicalPath: '/media'
             }

@@ -3,6 +3,7 @@ import { ViewportScroller } from '@angular/common';
 import { ActivatedRoute, RouterOutlet, Router, Event, NavigationEnd } from '@angular/router';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { WhatsappFloatComponent } from './common/whatsapp-float/whatsapp-float.component';
+import { SocialShareComponent } from './common/social-share/social-share.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { BackToTopComponent } from './common/back-to-top/back-to-top.component';
 import { SeoService } from './shared/services/seo.service';
@@ -10,7 +11,7 @@ import { SeoService } from './shared/services/seo.service';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, NavbarComponent, WhatsappFloatComponent, FooterComponent, BackToTopComponent],
+    imports: [RouterOutlet, NavbarComponent, WhatsappFloatComponent, SocialShareComponent, FooterComponent, BackToTopComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
