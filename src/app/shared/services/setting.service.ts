@@ -9,6 +9,7 @@ export interface Settings {
     whatsapp?: string;
     facebook?: string;
     instagram?: string;
+    youtube?: string;
     twitter?: string;
     linkedin?: string;
     email?: string;

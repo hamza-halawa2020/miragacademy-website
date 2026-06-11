@@ -1,16 +1,16 @@
-<div class="ss-wrapper">
+<div class="ss-wrapper" *ngIf="socialLinks.length">
 
   <!-- Menu (above trigger) -->
   <div class="ss-menu" [class.is-open]="isOpen" role="menu">
     <button
-      *ngFor="let option of shareOptions"
+      *ngFor="let link of socialLinks"
       class="ss-item"
-      [style.--c]="option.color"
-      (click)="share(option.key)"
-      [attr.aria-label]="'Share on ' + option.key"
+      [style.--c]="link.color"
+      (click)="openLink(link.url)"
+      [attr.aria-label]="link.label"
       role="menuitem">
-      <span class="ss-item__icon" [innerHTML]="option.svg"></span>
-      <span class="ss-item__label">{{ option.key }}</span>
+      <span class="ss-item__icon" [innerHTML]="link.svg"></span>
+      <span class="ss-item__label">{{ link.label }}</span>
     </button>
   </div>
 
@@ -20,8 +20,7 @@
     [class.is-open]="isOpen"
     (click)="toggleShare()"
     [attr.aria-expanded]="isOpen"
-    aria-label="Share this page">
-    <!-- share icon: SVG to avoid font subset issues -->
+    aria-label="Follow us">
     <svg class="ss-icon-share" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
       <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
       <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>

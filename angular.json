@@ -33,6 +33,11 @@
                 "output": "/assets/"
               },
               {
+                "glob": "**/*",
+                "input": "node_modules/@fortawesome/fontawesome-free/webfonts",
+                "output": "/webfonts/"
+              },
+              {
                 "glob": "robots.txt",
                 "input": "src",
                 "output": "/"
